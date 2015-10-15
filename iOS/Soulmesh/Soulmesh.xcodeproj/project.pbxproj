@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9B782801BD011B300A886FD /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B7827F1BD011B300A886FD /* mainBG.png */; settings = {ASSET_TAGS = (); }; };
+		A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A97DF8B91BD0238D0075FB8B /* mainBG.png */; settings = {ASSET_TAGS = (); }; };
 		A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B782851BD0184600A886FD /* SoulmeshAPI.swift */; settings = {ASSET_TAGS = (); }; };
 		A9B782B51BD01CD500A886FD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B782AC1BD01CBC00A886FD /* Alamofire.framework */; };
 		A9B782B61BD01CD500A886FD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9B782AC1BD01CBC00A886FD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -95,7 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A9B7827F1BD011B300A886FD /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainBG.png; path = ../../../../Project/Gphx/mainBG.png; sourceTree = "<group>"; };
+		A97DF8B91BD0238D0075FB8B /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		A9B782851BD0184600A886FD /* SoulmeshAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoulmeshAPI.swift; sourceTree = "<group>"; };
 		A9B782A31BD01CBC00A886FD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		A9B782B91BD0216500A886FD /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		A9B7827E1BD00AAE00A886FD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A9B7827F1BD011B300A886FD /* mainBG.png */,
+				A97DF8B91BD0238D0075FB8B /* mainBG.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 				A9B8B2991BD0059800FA2B9D /* LaunchScreen.storyboard in Resources */,
 				A9B8B2961BD0059800FA2B9D /* Assets.xcassets in Resources */,
 				A9B8B2941BD0059800FA2B9D /* Main.storyboard in Resources */,
-				A9B782801BD011B300A886FD /* mainBG.png in Resources */,
+				A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
