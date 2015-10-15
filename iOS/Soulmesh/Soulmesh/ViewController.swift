@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Properties
+    @IBOutlet weak var button_login: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Initial UI styling adjustments
+        button_login.layer.cornerRadius = 7;
     }
 
     override func didReceiveMemoryWarning() {
