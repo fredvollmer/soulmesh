@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9B8B28F1BD0059800FA2B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8B28E1BD0059800FA2B9D /* AppDelegate.swift */; };
+		A9B8B2911BD0059800FA2B9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8B2901BD0059800FA2B9D /* ViewController.swift */; };
+		A9B8B2941BD0059800FA2B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B8B2921BD0059800FA2B9D /* Main.storyboard */; };
+		A9B8B2961BD0059800FA2B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B8B2951BD0059800FA2B9D /* Assets.xcassets */; };
+		A9B8B2991BD0059800FA2B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B8B2971BD0059800FA2B9D /* LaunchScreen.storyboard */; };
+		A9B8B2A41BD0059800FA2B9D /* SoulmeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8B2A31BD0059800FA2B9D /* SoulmeshTests.swift */; };
+		A9B8B2AF1BD0059800FA2B9D /* SoulmeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8B2AE1BD0059800FA2B9D /* SoulmeshUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9B8B2A01BD0059800FA2B9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9B8B2831BD0059800FA2B9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9B8B28A1BD0059800FA2B9D;
+			remoteInfo = Soulmesh;
+		};
+		A9B8B2AB1BD0059800FA2B9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9B8B2831BD0059800FA2B9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9B8B28A1BD0059800FA2B9D;
+			remoteInfo = Soulmesh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9B8B28B1BD0059800FA2B9D /* Soulmesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulmesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B8B28E1BD0059800FA2B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A9B8B2901BD0059800FA2B9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9B8B2931BD0059800FA2B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9B8B2951BD0059800FA2B9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9B8B2981BD0059800FA2B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9B8B29A1BD0059800FA2B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9B8B29F1BD0059800FA2B9D /* SoulmeshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulmeshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B8B2A31BD0059800FA2B9D /* SoulmeshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulmeshTests.swift; sourceTree = "<group>"; };
+		A9B8B2A51BD0059800FA2B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9B8B2AA1BD0059800FA2B9D /* SoulmeshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulmeshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B8B2AE1BD0059800FA2B9D /* SoulmeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulmeshUITests.swift; sourceTree = "<group>"; };
+		A9B8B2B01BD0059800FA2B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9B8B2881BD0059800FA2B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B8B29C1BD0059800FA2B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B8B2A71BD0059800FA2B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9B8B2821BD0059800FA2B9D = {
+			isa = PBXGroup;
+			children = (
+				A9B8B28D1BD0059800FA2B9D /* Soulmesh */,
+				A9B8B2A21BD0059800FA2B9D /* SoulmeshTests */,
+				A9B8B2AD1BD0059800FA2B9D /* SoulmeshUITests */,
+				A9B8B28C1BD0059800FA2B9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9B8B28C1BD0059800FA2B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9B8B28B1BD0059800FA2B9D /* Soulmesh.app */,
+				A9B8B29F1BD0059800FA2B9D /* SoulmeshTests.xctest */,
+				A9B8B2AA1BD0059800FA2B9D /* SoulmeshUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9B8B28D1BD0059800FA2B9D /* Soulmesh */ = {
+			isa = PBXGroup;
+			children = (
+				A9B8B28E1BD0059800FA2B9D /* AppDelegate.swift */,
+				A9B8B2901BD0059800FA2B9D /* ViewController.swift */,
+				A9B8B2921BD0059800FA2B9D /* Main.storyboard */,
+				A9B8B2951BD0059800FA2B9D /* Assets.xcassets */,
+				A9B8B2971BD0059800FA2B9D /* LaunchScreen.storyboard */,
+				A9B8B29A1BD0059800FA2B9D /* Info.plist */,
+			);
+			path = Soulmesh;
+			sourceTree = "<group>";
+		};
+		A9B8B2A21BD0059800FA2B9D /* SoulmeshTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9B8B2A31BD0059800FA2B9D /* SoulmeshTests.swift */,
+				A9B8B2A51BD0059800FA2B9D /* Info.plist */,
+			);
+			path = SoulmeshTests;
+			sourceTree = "<group>";
+		};
+		A9B8B2AD1BD0059800FA2B9D /* SoulmeshUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9B8B2AE1BD0059800FA2B9D /* SoulmeshUITests.swift */,
+				A9B8B2B01BD0059800FA2B9D /* Info.plist */,
+			);
+			path = SoulmeshUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9B8B28A1BD0059800FA2B9D /* Soulmesh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B8B2B31BD0059800FA2B9D /* Build configuration list for PBXNativeTarget "Soulmesh" */;
+			buildPhases = (
+				A9B8B2871BD0059800FA2B9D /* Sources */,
+				A9B8B2881BD0059800FA2B9D /* Frameworks */,
+				A9B8B2891BD0059800FA2B9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soulmesh;
+			productName = Soulmesh;
+			productReference = A9B8B28B1BD0059800FA2B9D /* Soulmesh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9B8B29E1BD0059800FA2B9D /* SoulmeshTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B8B2B61BD0059800FA2B9D /* Build configuration list for PBXNativeTarget "SoulmeshTests" */;
+			buildPhases = (
+				A9B8B29B1BD0059800FA2B9D /* Sources */,
+				A9B8B29C1BD0059800FA2B9D /* Frameworks */,
+				A9B8B29D1BD0059800FA2B9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9B8B2A11BD0059800FA2B9D /* PBXTargetDependency */,
+			);
+			name = SoulmeshTests;
+			productName = SoulmeshTests;
+			productReference = A9B8B29F1BD0059800FA2B9D /* SoulmeshTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9B8B2A91BD0059800FA2B9D /* SoulmeshUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B8B2B91BD0059800FA2B9D /* Build configuration list for PBXNativeTarget "SoulmeshUITests" */;
+			buildPhases = (
+				A9B8B2A61BD0059800FA2B9D /* Sources */,
+				A9B8B2A71BD0059800FA2B9D /* Frameworks */,
+				A9B8B2A81BD0059800FA2B9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9B8B2AC1BD0059800FA2B9D /* PBXTargetDependency */,
+			);
+			name = SoulmeshUITests;
+			productName = SoulmeshUITests;
+			productReference = A9B8B2AA1BD0059800FA2B9D /* SoulmeshUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9B8B2831BD0059800FA2B9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Fred Vollmer";
+				TargetAttributes = {
+					A9B8B28A1BD0059800FA2B9D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					A9B8B29E1BD0059800FA2B9D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = A9B8B28A1BD0059800FA2B9D;
+					};
+					A9B8B2A91BD0059800FA2B9D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = A9B8B28A1BD0059800FA2B9D;
+					};
+				};
+			};
+			buildConfigurationList = A9B8B2861BD0059800FA2B9D /* Build configuration list for PBXProject "Soulmesh" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9B8B2821BD0059800FA2B9D;
+			productRefGroup = A9B8B28C1BD0059800FA2B9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9B8B28A1BD0059800FA2B9D /* Soulmesh */,
+				A9B8B29E1BD0059800FA2B9D /* SoulmeshTests */,
+				A9B8B2A91BD0059800FA2B9D /* SoulmeshUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9B8B2891BD0059800FA2B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9B8B2991BD0059800FA2B9D /* LaunchScreen.storyboard in Resources */,
+				A9B8B2961BD0059800FA2B9D /* Assets.xcassets in Resources */,
+				A9B8B2941BD0059800FA2B9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B8B29D1BD0059800FA2B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B8B2A81BD0059800FA2B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9B8B2871BD0059800FA2B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9B8B2911BD0059800FA2B9D /* ViewController.swift in Sources */,
+				A9B8B28F1BD0059800FA2B9D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B8B29B1BD0059800FA2B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9B8B2A41BD0059800FA2B9D /* SoulmeshTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B8B2A61BD0059800FA2B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9B8B2AF1BD0059800FA2B9D /* SoulmeshUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9B8B2A11BD0059800FA2B9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9B8B28A1BD0059800FA2B9D /* Soulmesh */;
+			targetProxy = A9B8B2A01BD0059800FA2B9D /* PBXContainerItemProxy */;
+		};
+		A9B8B2AC1BD0059800FA2B9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9B8B28A1BD0059800FA2B9D /* Soulmesh */;
+			targetProxy = A9B8B2AB1BD0059800FA2B9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9B8B2921BD0059800FA2B9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9B8B2931BD0059800FA2B9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A9B8B2971BD0059800FA2B9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9B8B2981BD0059800FA2B9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9B8B2B11BD0059800FA2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A9B8B2B21BD0059800FA2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9B8B2B41BD0059800FA2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Soulmesh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.Soulmesh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9B8B2B51BD0059800FA2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Soulmesh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.Soulmesh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A9B8B2B71BD0059800FA2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SoulmeshTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.SoulmeshTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soulmesh.app/Soulmesh";
+			};
+			name = Debug;
+		};
+		A9B8B2B81BD0059800FA2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SoulmeshTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.SoulmeshTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soulmesh.app/Soulmesh";
+			};
+			name = Release;
+		};
+		A9B8B2BA1BD0059800FA2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SoulmeshUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.SoulmeshUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Soulmesh;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A9B8B2BB1BD0059800FA2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SoulmeshUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.SoulmeshUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Soulmesh;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9B8B2861BD0059800FA2B9D /* Build configuration list for PBXProject "Soulmesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B8B2B11BD0059800FA2B9D /* Debug */,
+				A9B8B2B21BD0059800FA2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9B8B2B31BD0059800FA2B9D /* Build configuration list for PBXNativeTarget "Soulmesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B8B2B41BD0059800FA2B9D /* Debug */,
+				A9B8B2B51BD0059800FA2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9B8B2B61BD0059800FA2B9D /* Build configuration list for PBXNativeTarget "SoulmeshTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B8B2B71BD0059800FA2B9D /* Debug */,
+				A9B8B2B81BD0059800FA2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9B8B2B91BD0059800FA2B9D /* Build configuration list for PBXNativeTarget "SoulmeshUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B8B2BA1BD0059800FA2B9D /* Debug */,
+				A9B8B2BB1BD0059800FA2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9B8B2831BD0059800FA2B9D /* Project object */;
+}
