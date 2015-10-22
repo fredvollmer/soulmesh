@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Vc login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Soulmesh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="vc_login" customModule="Soulmesh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s3P-Sp-Enb"/>
                         <viewControllerLayoutGuide type="bottom" id="Esq-0F-0Ag"/>
@@ -45,6 +45,10 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login_main:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsZ-To-HI1"/>
+                                    <segue destination="2uD-2x-02m" kind="show" identifier="login-main" id="w6w-Hc-0EM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,6 +76,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="591" y="369"/>
+        </scene>
+        <!--Vc main-->
+        <scene sceneID="CEL-NX-od8">
+            <objects>
+                <viewController id="2uD-2x-02m" customClass="vc_main" customModule="Soulmesh" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UN1-Qj-ieV"/>
+                        <viewControllerLayoutGuide type="bottom" id="aeg-PB-hGU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sZL-mM-UKF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-CO-xu1" customClass="SVGKFastImageView">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOy-CO-xu1" firstAttribute="top" secondItem="UN1-Qj-ieV" secondAttribute="bottom" constant="60" id="0Ed-uF-s3D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bOy-CO-xu1" secondAttribute="trailing" id="ayM-2d-rMW"/>
+                            <constraint firstItem="aeg-PB-hGU" firstAttribute="top" secondItem="bOy-CO-xu1" secondAttribute="bottom" id="hbV-OU-Hfl"/>
+                            <constraint firstItem="bOy-CO-xu1" firstAttribute="leading" secondItem="sZL-mM-UKF" secondAttribute="leadingMargin" id="wPs-qT-TFq"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="view_svg" destination="bOy-CO-xu1" id="6EE-gm-oDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQX-4Q-fNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="369"/>
         </scene>
     </scenes>
     <resources>
