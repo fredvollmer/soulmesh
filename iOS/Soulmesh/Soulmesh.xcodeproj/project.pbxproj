@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A97DF8B91BD0238D0075FB8B /* mainBG.png */; settings = {ASSET_TAGS = (); }; };
-		A98CF38D1BD7618500DEC170 /* floor1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A98CF38C1BD7618500DEC170 /* floor1.svg */; settings = {ASSET_TAGS = (); }; };
-		A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B782851BD0184600A886FD /* SoulmeshAPI.swift */; settings = {ASSET_TAGS = (); }; };
+		A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A97DF8B91BD0238D0075FB8B /* mainBG.png */; };
+		A98CF38D1BD7618500DEC170 /* floor1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A98CF38C1BD7618500DEC170 /* floor1.svg */; };
+		A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B782851BD0184600A886FD /* SoulmeshAPI.swift */; };
 		A9B782B51BD01CD500A886FD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B782AC1BD01CBC00A886FD /* Alamofire.framework */; };
 		A9B782B61BD01CD500A886FD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9B782AC1BD01CBC00A886FD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A9B782BA1BD0216500A886FD /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B782B91BD0216500A886FD /* Sensor.swift */; settings = {ASSET_TAGS = (); }; };
+		A9B782BA1BD0216500A886FD /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B782B91BD0216500A886FD /* Sensor.swift */; };
 		A9B8B28F1BD0059800FA2B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8B28E1BD0059800FA2B9D /* AppDelegate.swift */; };
 		A9B8B2911BD0059800FA2B9D /* vc_login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8B2901BD0059800FA2B9D /* vc_login.swift */; };
 		A9B8B2941BD0059800FA2B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B8B2921BD0059800FA2B9D /* Main.storyboard */; };
@@ -23,8 +23,11 @@
 		A9C383FC1BD6A0270025EA92 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C383FB1BD6A0270025EA92 /* CoreText.framework */; };
 		A9C383FE1BD6A0300025EA92 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C383FD1BD6A0300025EA92 /* CoreImage.framework */; };
 		A9C384001BD6A03B0025EA92 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C383FF1BD6A03B0025EA92 /* libxml2.tbd */; };
-		A9C384FF1BD6A3FB0025EA92 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C3847E1BD6A3FB0025EA92 /* libSVGKit-iOS.1.2.0.a */; settings = {ASSET_TAGS = (); }; };
-		A9C385011BD6A5AE0025EA92 /* vc_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C385001BD6A5AE0025EA92 /* vc_main.swift */; settings = {ASSET_TAGS = (); }; };
+		A9C384FF1BD6A3FB0025EA92 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C3847E1BD6A3FB0025EA92 /* libSVGKit-iOS.1.2.0.a */; };
+		A9C385011BD6A5AE0025EA92 /* vc_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C385001BD6A5AE0025EA92 /* vc_main.swift */; };
+		A9CFF4591BDDD71100B8F645 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9CFF4581BDDD71100B8F645 /* fontawesome-webfont.ttf */; };
+		A9CFF45F1BDDE46500B8F645 /* HuninnMesh-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CFF45E1BDDE46500B8F645 /* HuninnMesh-logo.png */; };
+		A9CFF4611BDDEE8E00B8F645 /* table_buildingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +253,9 @@
 		A9C384FD1BD6A3FB0025EA92 /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
 		A9C384FE1BD6A3FB0025EA92 /* TinySVGTextAreaElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinySVGTextAreaElement.h; sourceTree = "<group>"; };
 		A9C385001BD6A5AE0025EA92 /* vc_main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vc_main.swift; sourceTree = "<group>"; };
+		A9CFF4581BDDD71100B8F645 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		A9CFF45E1BDDE46500B8F645 /* HuninnMesh-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HuninnMesh-logo.png"; sourceTree = "<group>"; };
+		A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = table_buildingList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +291,8 @@
 		A9B7827E1BD00AAE00A886FD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A9CFF45E1BDDE46500B8F645 /* HuninnMesh-logo.png */,
+				A9CFF4581BDDD71100B8F645 /* fontawesome-webfont.ttf */,
 				A97DF8B91BD0238D0075FB8B /* mainBG.png */,
 			);
 			name = Assets;
@@ -301,6 +309,7 @@
 		A9B782821BD0177B00A886FD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -631,6 +640,7 @@
 				TargetAttributes = {
 					A9B8B28A1BD0059800FA2B9D = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 77KXXD7FXX;
 					};
 					A9B8B29E1BD0059800FA2B9D = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -714,6 +724,8 @@
 				A9B8B2991BD0059800FA2B9D /* LaunchScreen.storyboard in Resources */,
 				A9B8B2961BD0059800FA2B9D /* Assets.xcassets in Resources */,
 				A9B8B2941BD0059800FA2B9D /* Main.storyboard in Resources */,
+				A9CFF4591BDDD71100B8F645 /* fontawesome-webfont.ttf in Resources */,
+				A9CFF45F1BDDE46500B8F645 /* HuninnMesh-logo.png in Resources */,
 				A98CF38D1BD7618500DEC170 /* floor1.svg in Resources */,
 				A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */,
 			);
@@ -744,6 +756,7 @@
 				A9B782BA1BD0216500A886FD /* Sensor.swift in Sources */,
 				A9B8B28F1BD0059800FA2B9D /* AppDelegate.swift in Sources */,
 				A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */,
+				A9CFF4611BDDEE8E00B8F645 /* table_buildingList.swift in Sources */,
 				A9C385011BD6A5AE0025EA92 /* vc_main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,6 +905,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -911,6 +926,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.Soulmesh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Soulmesh-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -921,6 +937,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -940,6 +958,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Soulmesh.Soulmesh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Soulmesh-Bridging-Header.h";
 			};
 			name = Release;

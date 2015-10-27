@@ -13,6 +13,8 @@ class vc_login: UIViewController {
     // MARK: Properties
     @IBOutlet weak var button_login: UIButton!
     
+    @IBOutlet weak var table_buildings: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,8 @@ class vc_login: UIViewController {
         // Initial UI styling adjustments
         button_login.layer.cornerRadius = 7;
         
+        // Buildings table initial setup
+        //setupBuildingsTable()
     }
 
     override func didReceiveMemoryWarning() {
