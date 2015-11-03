@@ -19,7 +19,7 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var btn_sensors: UIButton!;
     
     @IBOutlet weak var sv_svgScroller: UIScrollView!;
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,7 +68,7 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // SCroll shit
+    // Scroll shit
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return view_svg
     }
@@ -119,6 +119,20 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         imgView.frame = contentsFrame
     }
     
+    // MARK: Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch (segue.identifier) {
+        case "popFloors"? :
+            if let controller = segue.destinationViewController.popoverPresentationController {
+                controller.sourceRect = controller.sourceView!.bounds
+            }
+            break
+        default:
+            break
+    }
+}
+    
+    
     /*
 - (BOOL)isPoint:(CGPoint)p withinDistance:(CGFloat)distance ofPath:(CGPathRef)path
 {
@@ -128,5 +142,4 @@ CGPathRelease(hitPath);
 return isWithinDistance;
 }
 */
-
 }

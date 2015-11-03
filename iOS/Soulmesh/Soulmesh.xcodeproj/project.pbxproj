@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A97DF8B91BD0238D0075FB8B /* mainBG.png */; };
 		A98CF38D1BD7618500DEC170 /* floor1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A98CF38C1BD7618500DEC170 /* floor1.svg */; };
+		A99E73E61BE70B16004FA583 /* table_floors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E73E51BE70B16004FA583 /* table_floors.swift */; };
+		A99E73F21BE73FFC004FA583 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99E73F11BE73FFC004FA583 /* CoreGraphics.framework */; };
+		A99E73F31BE7400F004FA583 /* MMMaterialDesignSpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99E73F01BE73FE6004FA583 /* MMMaterialDesignSpinner.framework */; };
+		A99E73F41BE7400F004FA583 /* MMMaterialDesignSpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A99E73F01BE73FE6004FA583 /* MMMaterialDesignSpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B782851BD0184600A886FD /* SoulmeshAPI.swift */; };
 		A9B782B51BD01CD500A886FD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B782AC1BD01CBC00A886FD /* Alamofire.framework */; };
 		A9B782B61BD01CD500A886FD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9B782AC1BD01CBC00A886FD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,6 +35,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A99E73EF1BE73FE6004FA583 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A99E73EB1BE73FE6004FA583 /* MMMaterialDesignSpinner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9295C9321B253D2D00C388EB;
+			remoteInfo = MMMaterialDesignSpinner;
+		};
+		A99E73F51BE7400F004FA583 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A99E73EB1BE73FE6004FA583 /* MMMaterialDesignSpinner.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9295C9311B253D2D00C388EB;
+			remoteInfo = MMMaterialDesignSpinner;
+		};
 		A9B782AB1BD01CBC00A886FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9B782A31BD01CBC00A886FD /* Alamofire.xcodeproj */;
@@ -97,6 +115,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A9B782B61BD01CD500A886FD /* Alamofire.framework in Embed Frameworks */,
+				A99E73F41BE7400F004FA583 /* MMMaterialDesignSpinner.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +125,9 @@
 /* Begin PBXFileReference section */
 		A97DF8B91BD0238D0075FB8B /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		A98CF38C1BD7618500DEC170 /* floor1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = floor1.svg; sourceTree = "<group>"; };
+		A99E73E51BE70B16004FA583 /* table_floors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = table_floors.swift; sourceTree = "<group>"; };
+		A99E73EB1BE73FE6004FA583 /* MMMaterialDesignSpinner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMMaterialDesignSpinner.xcodeproj; path = "../../../../../../../Downloads/MMMaterialDesignSpinner-master/MMMaterialDesignSpinner.xcodeproj"; sourceTree = "<group>"; };
+		A99E73F11BE73FFC004FA583 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A9B782851BD0184600A886FD /* SoulmeshAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoulmeshAPI.swift; sourceTree = "<group>"; };
 		A9B782A31BD01CBC00A886FD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		A9B782B91BD0216500A886FD /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
@@ -263,7 +285,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99E73F21BE73FFC004FA583 /* CoreGraphics.framework in Frameworks */,
 				A9C384FF1BD6A3FB0025EA92 /* libSVGKit-iOS.1.2.0.a in Frameworks */,
+				A99E73F31BE7400F004FA583 /* MMMaterialDesignSpinner.framework in Frameworks */,
 				A9C384001BD6A03B0025EA92 /* libxml2.tbd in Frameworks */,
 				A9C383FE1BD6A0300025EA92 /* CoreImage.framework in Frameworks */,
 				A9C383FC1BD6A0270025EA92 /* CoreText.framework in Frameworks */,
@@ -288,6 +312,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A99E73EC1BE73FE6004FA583 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A99E73F01BE73FE6004FA583 /* MMMaterialDesignSpinner.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A9B7827E1BD00AAE00A886FD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */,
+				A99E73E51BE70B16004FA583 /* table_floors.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -347,6 +380,7 @@
 		A9B8B2821BD0059800FA2B9D = {
 			isa = PBXGroup;
 			children = (
+				A99E73EB1BE73FE6004FA583 /* MMMaterialDesignSpinner.xcodeproj */,
 				A9B782A31BD01CBC00A886FD /* Alamofire.xcodeproj */,
 				A9B8B28D1BD0059800FA2B9D /* Soulmesh */,
 				A9B8B2A21BD0059800FA2B9D /* SoulmeshTests */,
@@ -405,6 +439,7 @@
 		A9C383C81BD692B30025EA92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A99E73F11BE73FFC004FA583 /* CoreGraphics.framework */,
 				A9C383FF1BD6A03B0025EA92 /* libxml2.tbd */,
 				A9C383FD1BD6A0300025EA92 /* CoreImage.framework */,
 				A9C383FB1BD6A0270025EA92 /* CoreText.framework */,
@@ -586,6 +621,7 @@
 			);
 			dependencies = (
 				A9B782B81BD01CD500A886FD /* PBXTargetDependency */,
+				A99E73F61BE7400F004FA583 /* PBXTargetDependency */,
 			);
 			name = Soulmesh;
 			productName = Soulmesh;
@@ -668,6 +704,10 @@
 					ProductGroup = A9B782A41BD01CBC00A886FD /* Products */;
 					ProjectRef = A9B782A31BD01CBC00A886FD /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = A99E73EC1BE73FE6004FA583 /* Products */;
+					ProjectRef = A99E73EB1BE73FE6004FA583 /* MMMaterialDesignSpinner.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -679,6 +719,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		A99E73F01BE73FE6004FA583 /* MMMaterialDesignSpinner.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MMMaterialDesignSpinner.framework;
+			remoteRef = A99E73EF1BE73FE6004FA583 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A9B782AC1BD01CBC00A886FD /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -753,6 +800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B8B2911BD0059800FA2B9D /* vc_login.swift in Sources */,
+				A99E73E61BE70B16004FA583 /* table_floors.swift in Sources */,
 				A9B782BA1BD0216500A886FD /* Sensor.swift in Sources */,
 				A9B8B28F1BD0059800FA2B9D /* AppDelegate.swift in Sources */,
 				A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */,
@@ -780,6 +828,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A99E73F61BE7400F004FA583 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMMaterialDesignSpinner;
+			targetProxy = A99E73F51BE7400F004FA583 /* PBXContainerItemProxy */;
+		};
 		A9B782B81BD01CD500A886FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";

@@ -8,16 +8,16 @@
 
 import UIKit
 
-class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSource {
+class table_floors: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Temporary prototyping vars
-    let _buildingList: [String] = ["Reid Hall", "Montana Hall", "EPS"];
+    let _buildingList: [String] = ["Basement", "First", "Second", "Roof"];
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         setup()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -32,12 +32,12 @@ class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSourc
         // Register cell class
         self.registerClass(UITableViewCell.self, forCellReuseIdentifier: "buildListCell")
     }
-
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+    // Drawing code
     }
     */
     
@@ -49,6 +49,7 @@ class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : UITableViewCell =  self.dequeueReusableCellWithIdentifier("buildListCell") as UITableViewCell!
+        cell.backgroundColor = UIColor.clearColor()
         cell.textLabel?.text = _buildingList[indexPath.row]
         return cell
     }
