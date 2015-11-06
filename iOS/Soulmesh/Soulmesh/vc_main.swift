@@ -11,7 +11,7 @@ import UIKit
 class vc_main: UIViewController, UIScrollViewDelegate {
     
     // MARK: Properties
-    @IBOutlet weak var view_svg: SVGKLayeredImageView!;
+    @IBOutlet weak var view_svg: SouldmeshSVGView!;
     
     @IBOutlet weak var btn_floors: UIButton!;
     @IBOutlet weak var btn_back: UIButton!;
@@ -20,9 +20,24 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var sv_svgScroller: UIScrollView!;
     
+    var shapeLayerArray :  [CAShapeLayer] = [];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
+        
+        // SVG view is hidden while image loads
+        view_svg.hidden = true
+        
+        // Set additional style properties
+        btn_floors.setTitle("\u{f0cb}", forState: .Normal)
+        btn_back.setTitle("\u{f053}", forState: .Normal)
+        btn_add.setTitle("\u{f067}", forState: .Normal)
+        btn_sensors.setTitle("\u{f041}", forState: .Normal)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         // Load SVG
         let svgimg: SVGKImage = SVGKImage(named: "floor1.svg");
         
@@ -32,7 +47,12 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         
         view_svg.backgroundColor = UIColor.clearColor();
         
+        
         view_svg.image = svgimg;
+        
+        changeFillColorRecursively(view_svg.layer.sublayers!, color: UIColor.grayColor())
+        
+        view_svg.hidden = false
         
         // Scroll view setup
         sv_svgScroller.delegate = self
@@ -50,17 +70,8 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         
         centerScrollViewContents(view_svg)
         
-        // Do any additional setup after loading the view.
-        
-        // Set additional style properties
-        btn_floors.setTitle("\u{f0cb}", forState: .Normal)
-        btn_back.setTitle("\u{f053}", forState: .Normal)
-        btn_add.setTitle("\u{f067}", forState: .Normal)
-        btn_sensors.setTitle("\u{f041}", forState: .Normal)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        changeFillColorRecursively(view_svg.layer.sublayers!, color: UIColor.grayColor())
+        shapeLayerArray = getLayers(view_svg.layer.sublayers!)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,6 +111,20 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func getLayers(sublayers :[AnyObject]) -> [CAShapeLayer]{
+        var ShapArray : [CAShapeLayer] = []
+        for eachLayer in sublayers{
+            if let newLayer = eachLayer as? CAShapeLayer{
+                ShapArray.append(newLayer)
+            }
+            if let newLayer = eachLayer as? CALayer, sub = newLayer.sublayers {
+                ShapArray = ShapArray + (getLayers(sub))
+            }
+            
+        }
+        return ShapArray
+    }
+    
     func centerScrollViewContents(imgView: SVGKLayeredImageView) {
         let boundsSize = sv_svgScroller.bounds.size
         var contentsFrame = imgView.frame
@@ -130,8 +155,7 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         default:
             break
     }
-}
-    
+}  
     
     /*
 - (BOOL)isPoint:(CGPoint)p withinDistance:(CGFloat)distance ofPath:(CGPathRef)path

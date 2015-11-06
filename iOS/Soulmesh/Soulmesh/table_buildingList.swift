@@ -10,6 +10,8 @@ import UIKit
 
 class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSource {
     
+    var vcDelegate : BuildingTableProtocol? = nil
+    
     // MARK: Temporary prototyping vars
     let _buildingList: [String] = ["Reid Hall", "Montana Hall", "EPS"];
     
@@ -54,6 +56,6 @@ class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        vcDelegate?.selectBuilding(555)
     }
 }

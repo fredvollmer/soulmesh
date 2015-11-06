@@ -9,12 +9,12 @@
 import UIKit
 import MMMaterialDesignSpinner
 
-class vc_login: UIViewController {
+class vc_login: UIViewController, BuildingTableProtocol {
     
     // MARK: Properties
     @IBOutlet weak var button_login: UIButton!
     
-    @IBOutlet weak var table_buildings: UITableView!
+    @IBOutlet weak var table_buildings: table_buildingList!
     
     // Login view chain
     var login_form : UIView!
@@ -32,13 +32,8 @@ class vc_login: UIViewController {
         login_AI = self.view.viewWithTag(2)
         login_welcome = self.view.viewWithTag(3)
         
-        // Add spinner to AI view
-        let spinner = MMMaterialDesignSpinner(frame: CGRectMake(0,0,60,60))
-        spinner.lineWidth = 4
-        spinner.tintColor = UIColor(red: 211/255.0, green: 147/255.0, blue: 44/255.0, alpha: 1.0)
-        spinner.frame.origin = login_AI.bounds.origin
-        login_AI.addSubview(spinner)
-        spinner.startAnimating()
+        // Set vcDelegate for building table
+        table_buildings.vcDelegate = self;
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,8 +48,22 @@ class vc_login: UIViewController {
         UIView.transitionFromView(
             login_form, toView: login_AI, duration: 0.4, options: [.ShowHideTransitionViews, .TransitionCrossDissolve], completion: nil)
         
+        // User login request
+        // TODO: Connect to user model
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3*NSEC_PER_SEC)), dispatch_get_main_queue(), {
+            // Show welcome/buildings list
+            self.view.bringSubviewToFront(self.login_welcome)
+            UIView.transitionFromView(
+                self.login_AI, toView: self.login_welcome, duration: 0.4, options: [.ShowHideTransitionViews, .TransitionCrossDissolve], completion: nil)
+        })
         
         //performSegueWithIdentifier("login-main", sender: sender)
+    }
+    
+    //MARK: SegueFromTable protocol implementation
+    func selectBuilding(buildingID: Int) {
+        performSegueWithIdentifier("login_main", sender: self)
     }
 
 }
