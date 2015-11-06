@@ -259,29 +259,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-gt-dQO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-gt-dQO" customClass="view_floorSCcroller" customModule="Soulmesh" customModuleProvider="target">
                                 <rect key="frame" x="111" y="140" width="787" height="532"/>
-                                <subviews>
-                                    <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-CO-xu1" customClass="SouldmeshSVGView" customModule="Soulmesh" customModuleProvider="target">
-                                        <rect key="frame" x="164" y="95" width="417" height="321"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="bOy-CO-xu1" firstAttribute="width" secondItem="9PP-gt-dQO" secondAttribute="width" constant="-20" id="9JM-rJ-3OW"/>
-                                    <constraint firstItem="bOy-CO-xu1" firstAttribute="top" secondItem="9PP-gt-dQO" secondAttribute="top" constant="20" id="Gei-c9-y2T"/>
-                                    <constraint firstAttribute="bottom" secondItem="bOy-CO-xu1" secondAttribute="bottom" constant="20" id="a3V-wp-ge0"/>
-                                    <constraint firstItem="bOy-CO-xu1" firstAttribute="height" secondItem="9PP-gt-dQO" secondAttribute="height" constant="-20" id="dht-dB-QSb"/>
-                                    <constraint firstItem="bOy-CO-xu1" firstAttribute="leading" secondItem="9PP-gt-dQO" secondAttribute="leading" constant="20" id="fiN-rY-WpH"/>
-                                    <constraint firstAttribute="trailing" secondItem="bOy-CO-xu1" secondAttribute="trailing" constant="20" id="hnX-2l-TPR"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="a3V-wp-ge0"/>
-                                        <exclude reference="hnX-2l-TPR"/>
-                                    </mask>
-                                </variation>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-78-Vcg">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="55"/>
@@ -336,20 +315,12 @@
                         <constraints>
                             <constraint firstItem="ZDH-78-Vcg" firstAttribute="top" secondItem="UN1-Qj-ieV" secondAttribute="bottom" id="2bF-Kf-anU"/>
                             <constraint firstItem="ZDH-78-Vcg" firstAttribute="leading" secondItem="sZL-mM-UKF" secondAttribute="leading" id="DzF-wP-ciH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bOy-CO-xu1" secondAttribute="trailing" constant="126" id="GOA-Sb-b04"/>
                             <constraint firstItem="9PP-gt-dQO" firstAttribute="leading" secondItem="sZL-mM-UKF" secondAttribute="leading" id="H9c-HK-lWF"/>
                             <constraint firstAttribute="trailing" secondItem="ZDH-78-Vcg" secondAttribute="trailing" id="Kzj-kD-LEn"/>
                             <constraint firstItem="aeg-PB-hGU" firstAttribute="top" secondItem="9PP-gt-dQO" secondAttribute="bottom" id="SPf-nO-Muc"/>
-                            <constraint firstItem="aeg-PB-hGU" firstAttribute="top" secondItem="bOy-CO-xu1" secondAttribute="bottom" id="bnq-Ym-BXP"/>
                             <constraint firstItem="9PP-gt-dQO" firstAttribute="top" secondItem="ZDH-78-Vcg" secondAttribute="bottom" id="l21-dJ-bG1"/>
                             <constraint firstAttribute="trailing" secondItem="9PP-gt-dQO" secondAttribute="trailing" id="lQD-yb-Kty"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="GOA-Sb-b04"/>
-                                <exclude reference="bnq-Ym-BXP"/>
-                            </mask>
-                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -360,7 +331,6 @@
                         <outlet property="btn_floors" destination="PRh-xt-3k9" id="H6E-OB-91K"/>
                         <outlet property="btn_sensors" destination="xU1-AF-dgo" id="1Be-PO-kOT"/>
                         <outlet property="sv_svgScroller" destination="9PP-gt-dQO" id="Fc3-Th-Hc4"/>
-                        <outlet property="view_svg" destination="bOy-CO-xu1" id="YPP-3h-Y9c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQX-4Q-fNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
