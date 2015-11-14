@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2uD-2x-02m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -63,7 +63,7 @@
                                                             <rect key="frame" x="15" y="0.0" width="339" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -206,7 +206,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Floors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWW-oj-PR8">
                                 <rect key="frame" x="274" y="13" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -259,9 +259,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-gt-dQO" customClass="view_floorSCcroller" customModule="Soulmesh" customModuleProvider="target">
-                                <rect key="frame" x="111" y="140" width="787" height="532"/>
-                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-78-Vcg">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="55"/>
                                 <subviews>
@@ -310,16 +307,20 @@
                                     <constraint firstAttribute="height" constant="55" id="muT-5B-mCM"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-gU-Uuc">
+                                <rect key="frame" x="275" y="252" width="474" height="263"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZDH-78-Vcg" firstAttribute="top" secondItem="UN1-Qj-ieV" secondAttribute="bottom" id="2bF-Kf-anU"/>
+                            <constraint firstItem="aeg-PB-hGU" firstAttribute="top" secondItem="Yva-gU-Uuc" secondAttribute="bottom" constant="20" id="3Mu-1h-RAK"/>
                             <constraint firstItem="ZDH-78-Vcg" firstAttribute="leading" secondItem="sZL-mM-UKF" secondAttribute="leading" id="DzF-wP-ciH"/>
-                            <constraint firstItem="9PP-gt-dQO" firstAttribute="leading" secondItem="sZL-mM-UKF" secondAttribute="leading" id="H9c-HK-lWF"/>
+                            <constraint firstAttribute="trailing" secondItem="Yva-gU-Uuc" secondAttribute="trailing" constant="20" id="F2V-SZ-hrU"/>
+                            <constraint firstItem="Yva-gU-Uuc" firstAttribute="top" secondItem="ZDH-78-Vcg" secondAttribute="bottom" constant="20" id="INa-AA-2nk"/>
                             <constraint firstAttribute="trailing" secondItem="ZDH-78-Vcg" secondAttribute="trailing" id="Kzj-kD-LEn"/>
-                            <constraint firstItem="aeg-PB-hGU" firstAttribute="top" secondItem="9PP-gt-dQO" secondAttribute="bottom" id="SPf-nO-Muc"/>
-                            <constraint firstItem="9PP-gt-dQO" firstAttribute="top" secondItem="ZDH-78-Vcg" secondAttribute="bottom" id="l21-dJ-bG1"/>
-                            <constraint firstAttribute="trailing" secondItem="9PP-gt-dQO" secondAttribute="trailing" id="lQD-yb-Kty"/>
+                            <constraint firstItem="Yva-gU-Uuc" firstAttribute="leading" secondItem="sZL-mM-UKF" secondAttribute="leading" constant="20" id="hzs-T2-3bn"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -330,7 +331,7 @@
                         <outlet property="btn_back" destination="0sK-ef-CEb" id="URD-IH-gNN"/>
                         <outlet property="btn_floors" destination="PRh-xt-3k9" id="H6E-OB-91K"/>
                         <outlet property="btn_sensors" destination="xU1-AF-dgo" id="1Be-PO-kOT"/>
-                        <outlet property="sv_svgScroller" destination="9PP-gt-dQO" id="Fc3-Th-Hc4"/>
+                        <outlet property="view_floorContainer" destination="Yva-gU-Uuc" id="olC-ca-T2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQX-4Q-fNm" userLabel="First Responder" sceneMemberID="firstResponder"/>

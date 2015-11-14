@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import SwiftyJSON
 
 class SoulmeshAPI: NSObject {
@@ -15,6 +16,7 @@ class SoulmeshAPI: NSObject {
     var server : ServerInterface
     var pm : PersistencyManager
     var online : Bool
+    let baseURL = "http://dfgt.com.temp.omnis.com/"
     
     // Init
     override init() {
@@ -40,6 +42,24 @@ class SoulmeshAPI: NSObject {
     // Get one building
     func getBuildingById (buildingID: Int)  {
         //return server.getBuildingByID(buildingID)
+    }
+    
+    /**************** Floor ****************/
+    
+    func getFloorMap(building : Int, floor: Int, callback: [String: JSON] -> Void) {
+        Alamofire.request(.GET, baseURL + "floor_id/" + String(building) + "/" + String(floor)).responseJSON {
+            response in
+            switch response.result {
+            case .Success(var data):
+                data = response.result.value!
+                let json = JSON(data).arrayValue[0].dictionaryValue
+                callback(json)
+                break
+            case .Failure(let e):
+                print(e)
+                break
+            }
+        }
     }
 
 }

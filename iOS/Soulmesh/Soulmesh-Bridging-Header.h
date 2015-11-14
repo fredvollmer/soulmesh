@@ -10,4 +10,5 @@
 #import "SVGKExporterUIImage.h"
 #import "SVGKImage+CGContext.h"
 #import "SVGKit.h"
+#import "SVGKSourceString.h"
 

@@ -16,8 +16,9 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var btn_back: UIButton!;
     @IBOutlet weak var btn_add: UIButton!;
     @IBOutlet weak var btn_sensors: UIButton!;
+    @IBOutlet weak var view_floorContainer: UIView!
     
-    @IBOutlet weak var sv_svgScroller: view_floorSCcroller!;
+    let floorVC : vc_floorMap = vc_floorMap()
     
     var shapeLayerArray :  [CAShapeLayer] = [];
     
@@ -34,7 +35,10 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+        super.viewDidAppear(animated)
+        self.addChildViewController(floorVC)
+        floorVC.view.frame = view_floorContainer.bounds
+        self.view_floorContainer.addSubview(floorVC.view)
     }
 
     override func didReceiveMemoryWarning() {
