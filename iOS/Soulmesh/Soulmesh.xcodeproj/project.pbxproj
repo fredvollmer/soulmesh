@@ -14,7 +14,14 @@
 		A909489D1BEB2B2600FB109B /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A909488F1BEB2AF000FB109B /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A90948A11BEB2D0600FB109B /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90948A01BEB2D0600FB109B /* PersistencyManager.swift */; };
 		A90948A31BEB2D1900FB109B /* ServerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90948A21BEB2D1900FB109B /* ServerInterface.swift */; };
+		A92662851BEFD4E000315B70 /* vc_floorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92662831BEFD4E000315B70 /* vc_floorMap.swift */; };
+		A92662861BEFD4E000315B70 /* vc_floorMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92662841BEFD4E000315B70 /* vc_floorMap.xib */; };
+		A934BF3F1BF5075E002822F2 /* smSVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934BF3E1BF5075E002822F2 /* smSVG.swift */; };
+		A95145FF1BF7CD260042455D /* SMSyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95145FE1BF7CD260042455D /* SMSyncEngine.swift */; };
+		A951460C1BF7DC3A0042455D /* SMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A951460A1BF7DC3A0042455D /* SMModel.xcdatamodeld */; };
 		A97DF8BA1BD0238D0075FB8B /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A97DF8B91BD0238D0075FB8B /* mainBG.png */; };
+		A987B5A61BF25A6300D8A4BB /* view_sensorMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987B5A51BF25A6300D8A4BB /* view_sensorMark.swift */; };
+		A987B5B21BF298DD00D8A4BB /* FloorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987B5B11BF298DD00D8A4BB /* FloorMap.swift */; };
 		A98CF38D1BD7618500DEC170 /* floor1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A98CF38C1BD7618500DEC170 /* floor1.svg */; };
 		A99E73E61BE70B16004FA583 /* table_floors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E73E51BE70B16004FA583 /* table_floors.swift */; };
 		A99E73F21BE73FFC004FA583 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99E73F11BE73FFC004FA583 /* CoreGraphics.framework */; };
@@ -39,7 +46,6 @@
 		A9CFF4591BDDD71100B8F645 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9CFF4581BDDD71100B8F645 /* fontawesome-webfont.ttf */; };
 		A9CFF45F1BDDE46500B8F645 /* HuninnMesh-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CFF45E1BDDE46500B8F645 /* HuninnMesh-logo.png */; };
 		A9CFF4611BDDEE8E00B8F645 /* table_buildingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */; };
-		A9D2317E1BED38DD00084A05 /* view_floorSCcroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2317D1BED38DD00084A05 /* view_floorSCcroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +200,14 @@
 		A90948841BEB2AF000FB109B /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "../../../../../../../Downloads/SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		A90948A01BEB2D0600FB109B /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		A90948A21BEB2D1900FB109B /* ServerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInterface.swift; sourceTree = "<group>"; };
+		A92662831BEFD4E000315B70 /* vc_floorMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vc_floorMap.swift; path = ../vc_floorMap.swift; sourceTree = "<group>"; };
+		A92662841BEFD4E000315B70 /* vc_floorMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vc_floorMap.xib; path = ../vc_floorMap.xib; sourceTree = "<group>"; };
+		A934BF3E1BF5075E002822F2 /* smSVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = smSVG.swift; sourceTree = "<group>"; };
+		A95145FE1BF7CD260042455D /* SMSyncEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSyncEngine.swift; sourceTree = "<group>"; };
+		A951460B1BF7DC3A0042455D /* SMModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SMModel.xcdatamodel; sourceTree = "<group>"; };
 		A97DF8B91BD0238D0075FB8B /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
+		A987B5A51BF25A6300D8A4BB /* view_sensorMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view_sensorMark.swift; sourceTree = "<group>"; };
+		A987B5B11BF298DD00D8A4BB /* FloorMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMap.swift; sourceTree = "<group>"; };
 		A98CF38C1BD7618500DEC170 /* floor1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = floor1.svg; sourceTree = "<group>"; };
 		A99E73E51BE70B16004FA583 /* table_floors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = table_floors.swift; sourceTree = "<group>"; };
 		A99E73EB1BE73FE6004FA583 /* MMMaterialDesignSpinner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMMaterialDesignSpinner.xcodeproj; path = "../../../../../../../Downloads/MMMaterialDesignSpinner-master/MMMaterialDesignSpinner.xcodeproj"; sourceTree = "<group>"; };
@@ -349,7 +362,6 @@
 		A9CFF4581BDDD71100B8F645 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		A9CFF45E1BDDE46500B8F645 /* HuninnMesh-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HuninnMesh-logo.png"; sourceTree = "<group>"; };
 		A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = table_buildingList.swift; sourceTree = "<group>"; };
-		A9D2317D1BED38DD00084A05 /* view_floorSCcroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = view_floorSCcroller.swift; path = ../view_floorSCcroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,8 +440,11 @@
 		A9B782811BD0177400A886FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A951460A1BF7DC3A0042455D /* SMModel.xcdatamodeld */,
+				A95145FE1BF7CD260042455D /* SMSyncEngine.swift */,
 				A9B782B91BD0216500A886FD /* Sensor.swift */,
 				A909487E1BEB25C100FB109B /* Building.swift */,
+				A987B5B11BF298DD00D8A4BB /* FloorMap.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -437,7 +452,8 @@
 		A9B782821BD0177B00A886FD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A9D2317D1BED38DD00084A05 /* view_floorSCcroller.swift */,
+				A934BF3E1BF5075E002822F2 /* smSVG.swift */,
+				A987B5A51BF25A6300D8A4BB /* view_sensorMark.swift */,
 				A9032D4B1BE880AC00DE534E /* view_spinner.swift */,
 				A9CFF4601BDDEE8E00B8F645 /* table_buildingList.swift */,
 				A99E73E51BE70B16004FA583 /* table_floors.swift */,
@@ -448,6 +464,8 @@
 		A9B782831BD0178100A886FD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A92662831BEFD4E000315B70 /* vc_floorMap.swift */,
+				A92662841BEFD4E000315B70 /* vc_floorMap.xib */,
 				A9B8B2901BD0059800FA2B9D /* vc_login.swift */,
 				A9C385001BD6A5AE0025EA92 /* vc_main.swift */,
 				A98CF38C1BD7618500DEC170 /* floor1.svg */,
@@ -924,6 +942,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92662861BEFD4E000315B70 /* vc_floorMap.xib in Resources */,
 				A9B8B2991BD0059800FA2B9D /* LaunchScreen.storyboard in Resources */,
 				A9B8B2961BD0059800FA2B9D /* Assets.xcassets in Resources */,
 				A9B8B2941BD0059800FA2B9D /* Main.storyboard in Resources */,
@@ -961,13 +980,18 @@
 				A9B782BA1BD0216500A886FD /* Sensor.swift in Sources */,
 				A9B8B28F1BD0059800FA2B9D /* AppDelegate.swift in Sources */,
 				A9B782861BD0184600A886FD /* SoulmeshAPI.swift in Sources */,
+				A934BF3F1BF5075E002822F2 /* smSVG.swift in Sources */,
+				A951460C1BF7DC3A0042455D /* SMModel.xcdatamodeld in Sources */,
 				A9CFF4611BDDEE8E00B8F645 /* table_buildingList.swift in Sources */,
-				A9D2317E1BED38DD00084A05 /* view_floorSCcroller.swift in Sources */,
+				A987B5A61BF25A6300D8A4BB /* view_sensorMark.swift in Sources */,
+				A92662851BEFD4E000315B70 /* vc_floorMap.swift in Sources */,
 				A9032D4C1BE880AC00DE534E /* view_spinner.swift in Sources */,
 				A909487F1BEB25C100FB109B /* Building.swift in Sources */,
 				A9C385011BD6A5AE0025EA92 /* vc_main.swift in Sources */,
 				A9032D521BE91A9500DE534E /* BuildingTableProtocol.swift in Sources */,
+				A987B5B21BF298DD00D8A4BB /* FloorMap.swift in Sources */,
 				A90948A11BEB2D0600FB109B /* PersistencyManager.swift in Sources */,
+				A95145FF1BF7CD260042455D /* SMSyncEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,6 +1295,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A951460A1BF7DC3A0042455D /* SMModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A951460B1BF7DC3A0042455D /* SMModel.xcdatamodel */,
+			);
+			currentVersion = A951460B1BF7DC3A0042455D /* SMModel.xcdatamodel */;
+			path = SMModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A9B8B2831BD0059800FA2B9D /* Project object */;
 }
