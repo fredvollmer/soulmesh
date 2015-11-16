@@ -1,8 +1,8 @@
 //
-//  Sensor.swift
+//  Sesnor.swift
 //  Soulmesh
 //
-//  Created by Fred Vollmer on 11/15/15.
+//  Created by Fred Vollmer on 11/14/15.
 //  Copyright © 2015 Fred Vollmer. All rights reserved.
 //
 

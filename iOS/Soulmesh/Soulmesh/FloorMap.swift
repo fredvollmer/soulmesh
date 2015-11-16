@@ -2,37 +2,37 @@
 //  FloorMap.swift
 //  Soulmesh
 //
-//  Created by Fred Vollmer on 11/10/15.
+//  Created by Fred Vollmer on 11/14/15.
 //  Copyright © 2015 Fred Vollmer. All rights reserved.
 //
 
-import UIKit
-import SwiftyJSON
+import Foundation
+import CoreData
 
-class FloorMap: NSObject {
+@objc(FloorMap)
+class FloorMap: NSManagedObject {
     
     // MARK: Properties
-    var buildingID : Int = 0
-    var floorNumber : Int = 0
-    var id : Int? = 0
-    var svg : SVGKImage = SVGKImage()
-    var sensors : [Sensor] = [Sensor]()
-    let api : SoulmeshAPI = SoulmeshAPI.sharedInstance
+    let baseURLToSVG = "http://dfgt.com.temp.omnis.com/svg/"
     
-    init(building : Int, floor: Int) {
-        buildingID = building
-        floorNumber = floor
-        super.init()
-    }
-    
-    func load(callback: Void -> ()) {
-        // Load floor SVG asynchronously
-        let url = NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg")
-        self.svg = SVGKImage(contentsOfURL: url)
-        api.getFloorMap(buildingID, floor: floorNumber, callback: {json in
-            self.id = Int(json["floorMapID"]!.string!)
-            print(String(json["floorPlan"]))
-            callback()
-        })
+    // Load and get SVG for floor map
+    func getSVG () -> SVGKImage {
+        var path: NSString = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        path = path.stringByAppendingPathComponent("FloorImages")
+        path = path.stringByAppendingPathComponent(String(floorMapID))
+        let fm = NSFileManager.defaultManager()
+        if (fm.fileExistsAtPath(path as String)) {
+            let image = SVGKImage(contentsOfFile: String(path))
+            return image
+        } else {
+            // Save image to disk
+            do {
+                try svg?.writeToFile(path as String, atomically: true, encoding: NSUTF8StringEncoding)
+            } catch {
+                print("Error saving SVG to disk")
+            }
+        }
+        let image = SVGKImage(contentsOfFile: String(path))
+        return image
     }
 }

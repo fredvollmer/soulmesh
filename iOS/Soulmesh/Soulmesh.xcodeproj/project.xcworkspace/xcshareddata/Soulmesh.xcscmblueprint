@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F36732057FB7AE7AA72528CC637128F2A3193DD1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F36732057FB7AE7AA72528CC637128F2A3193DD1" : 0,
+    "958932E9D08E4465709D54DB1E7CECF23B0F442E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4F61257E-0296-43C7-AB7D-5A628D5336BD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F36732057FB7AE7AA72528CC637128F2A3193DD1" : "soulmesh\/",
+    "958932E9D08E4465709D54DB1E7CECF23B0F442E" : "soulmesh\/iOS\/Vendor\/MagicalRecord\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Soulmesh",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/Soulmesh\/Soulmesh.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/magicalpanda\/MagicalRecord.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "958932E9D08E4465709D54DB1E7CECF23B0F442E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fredvollmer\/soulmesh.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F36732057FB7AE7AA72528CC637128F2A3193DD1"
+    }
+  ]
+}

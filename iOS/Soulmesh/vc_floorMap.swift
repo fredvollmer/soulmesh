@@ -7,29 +7,32 @@
 //
 
 import UIKit
+import MagicalRecord
 
 class vc_floorMap: UIViewController, UIScrollViewDelegate {
 
-        
-        @IBOutlet weak var view_svg: smSVG!
-        @IBOutlet weak var floorScroller: UIScrollView!
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            let floor = FloorMap(building: 1,floor: 1)
-            floor.load({
-                self.showFloor(floor)
-            })
-            
-        }
+    // MARK: Properties
+    var floor: FloorMap = FloorMap()
     
-    override func viewDidLayoutSubviews() {
+    @IBOutlet weak var view_svg: smSVG!
+    @IBOutlet weak var floorScroller: UIScrollView!
         
-        // Build scroll view
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            
+        // Initial stylings
         floorScroller.delegate = self
         floorScroller.backgroundColor = UIColor.clearColor()
         view_svg.backgroundColor = UIColor.clearColor()
-
+            
+        let floor = FloorMap.MR_createEntity()
+            
+        }
+    
+    func displayFloor(floor: FloorMap) {
+        self.floor = floor
+        setFloorScrollerImage(floor.getSVG())
+        
     }
     
         func getLayers(sublayers :[AnyObject]) -> [CAShapeLayer]{
@@ -114,31 +117,31 @@ class vc_floorMap: UIViewController, UIScrollViewDelegate {
     
     // MARK: Sensor MArkers
     
-    func showFloor (fmap: FloorMap) {
-        // Show activity indicator
-    
-        setFloorScrollerImage(fmap.svg)
-        for sensor in fmap.sensors {
-            addSensorToFloorMap(sensor)
+    func updateSensorsWithFloor (floor: FloorMap) {
+        // Clear previous floor's sensors
+        for mark in view_svg.subviews {
+            if (mark.isKindOfClass(view_sensorMark)) {
+                mark.removeFromSuperview()
+            }
         }
         
-        // Fake sensor
-        let s = Sensor()
-        addSensorToFloorMap(s)
-    }
-    
-    func addSensorToFloorMap (sesnor: Sensor) {
-        // marker
-        let mark : view_sensorMark = view_sensorMark()
-        mark.frame = CGRectMake(0, 0, 50, 50)
-        mark.center = self.view.center;
-        mark.backgroundColor = UIColor.clearColor()
-        
-        // "Drag" gesture recognizer
-        let gr : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didDragSensor:")
-        mark.addGestureRecognizer(gr)
-        
-        self.view_svg.addSubview(mark)
+        for sensorObject in floor.installedSesnors! {
+            let sensor = sensorObject as! InstalledSesnor
+            // Create marker view
+            let mark : view_sensorMark = view_sensorMark()
+            mark.frame = CGRectMake(0, 0, 50, 50)
+            mark.center = CGPointMake(CGFloat(sensor.x!), CGFloat(sensor.y!))
+            mark.backgroundColor = UIColor.clearColor()
+            
+            // Link with sensor object
+            mark.sensor = sensor
+            
+            // "Drag" gesture recognizer
+            let gr : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didDragSensor:")
+            mark.addGestureRecognizer(gr)
+            
+            self.view_svg.addSubview(mark)
+        }
     }
     
     func didDragSensor(recognizer : UIPanGestureRecognizer) {

@@ -11,6 +11,7 @@ import UIKit
 class vc_main: UIViewController, UIScrollViewDelegate {
     
     // MARK: Properties
+    var building: Building?
     
     @IBOutlet weak var btn_floors: UIButton!;
     @IBOutlet weak var btn_back: UIButton!;
@@ -20,7 +21,6 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     
     let floorVC : vc_floorMap = vc_floorMap()
     
-    var shapeLayerArray :  [CAShapeLayer] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,21 +40,26 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         floorVC.view.frame = view_floorContainer.bounds
         self.view_floorContainer.addSubview(floorVC.view)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // Switch to a new floor
+    func didSelectNewFloor(floor: FloorMap) {
         
-
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
     
@@ -62,22 +67,27 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch (segue.identifier) {
         case "popFloors"? :
-            if let controller = segue.destinationViewController.popoverPresentationController {
-                controller.sourceRect = controller.sourceView!.bounds
+            if let controller: vc_table_floors = segue.destinationViewController as? vc_table_floors {
+                // Set building
+                controller.building = building!
+                // Align arrow with proper button
+                controller.popoverPresentationController!.sourceRect = controller.popoverPresentationController!.sourceView!.bounds
             }
             break
         default:
             break
+        }
+        
+
     }
-}  
     
     /*
-- (BOOL)isPoint:(CGPoint)p withinDistance:(CGFloat)distance ofPath:(CGPathRef)path
-{
-CGPathRef hitPath = CGPathCreateCopyByStrokingPath(path, NULL, distance*2, kCGLineCapRound, kCGLineJoinRound, 0);
-BOOL isWithinDistance = CGPathContainsPoint(hitPath, NULL, p, false);
-CGPathRelease(hitPath);
-return isWithinDistance;
-}
-*/
+    - (BOOL)isPoint:(CGPoint)p withinDistance:(CGFloat)distance ofPath:(CGPathRef)path
+    {
+    CGPathRef hitPath = CGPathCreateCopyByStrokingPath(path, NULL, distance*2, kCGLineCapRound, kCGLineJoinRound, 0);
+    BOOL isWithinDistance = CGPathContainsPoint(hitPath, NULL, p, false);
+    CGPathRelease(hitPath);
+    return isWithinDistance;
+    }
+    */
 }

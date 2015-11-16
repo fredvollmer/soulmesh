@@ -2,29 +2,21 @@
 //  Building.swift
 //  Soulmesh
 //
-//  Created by Fred Vollmer on 11/4/15.
+//  Created by Fred Vollmer on 11/14/15.
 //  Copyright © 2015 Fred Vollmer. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreData
 import SwiftyJSON
 
-class Building: NSObject {
+@objc(Building)
+class Building: NSManagedObject {
     
-    // MARK: Properties
-    var id : Int
-    var name : String
-    var long : Double
-    var lat : Double
-    
-    // Build Building from JSON
-    init (withJson json : JSON) {
-        id = json["buildingID"].int!
-        name = json["buildingName"].string!
-        long = json["buildingLong"].double!
-        lat = json["buildingLat"].double!
-        super.init()
-
-    }
+    lazy var sortedFloorsArray: [FloorMap?] = {
+        var floorArray: [FloorMap] = self.floors?.allObjects as! [FloorMap]
+        floorArray.sortInPlace { $0.floorNumber! < $1.floorNumber! }
+        return floorArray
+    } ()
 
 }
