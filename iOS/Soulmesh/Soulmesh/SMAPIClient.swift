@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class SMAPIClient: AFHTTPRequestOperationManager {
     
@@ -31,7 +32,7 @@ class SMAPIClient: AFHTTPRequestOperationManager {
         return request
     }
     
-    func GETRequestForAllRecordsOfClass (className: String, updatedAfterDate updatedDate: NSDate? ) -> NSMutableURLRequest{
+    func GETRequestForAllRecordsOfClass (className: String, updatedAfterDate updatedDate: NSDate? ) -> NSMutableURLRequest? {
         var request: NSMutableURLRequest
         var parameters: NSDictionary
         
@@ -46,7 +47,7 @@ class SMAPIClient: AFHTTPRequestOperationManager {
             
             return request
         }
-        
+        return nil
     }
     
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AFNetworking
 
 class SMSyncEngine: NSObject {
     
@@ -38,7 +39,7 @@ class SMSyncEngine: NSObject {
     // Return most recent time a given entity was updated
     func mostRecentUpdatedAtDateForEntityWithName (name: String) -> NSDate {
         
-        var date: NSDate
+        var date: NSDate = NSDate(timeIntervalSince1970: 0)
         
         // Create NSFetchRequest
         let request = NSFetchRequest(entityName: name)
@@ -58,6 +59,7 @@ class SMSyncEngine: NSObject {
                 results = try context.executeFetchRequest(request)
             } catch {
                 NSLog("Error with fetch.")
+                results = []
             }
             if ((results.last) != nil) {
                 // Set date to the fetched result
@@ -73,17 +75,17 @@ class SMSyncEngine: NSObject {
     
     // Download data for delta sync
     func downloadDataForRegisteredObjects (useUpdatedAtDate: Bool) {
-        var operations: [AFHTTPRequestOperation]
+        var operations: [AFHTTPRequestOperation] = []
         
         // Loop through all registered class
         for className: String in registeredClassesToSync {
-            let mostRecentUpdateDate: NSDate
+            var mostRecentUpdateDate: NSDate? = nil
             if (useUpdatedAtDate) {
                 mostRecentUpdateDate = mostRecentUpdatedAtDateForEntityWithName(className)
             }
             
             // Create request
-            let request: NSMutableURLRequest = SMAPIClient.sharedInstance.GETRequestForAllRecordsOfClass(className, updatedAfterDate: mostRecentUpdateDate)
+            let request: NSMutableURLRequest = SMAPIClient.sharedInstance.GETRequestForAllRecordsOfClass(className, updatedAfterDate: mostRecentUpdateDate)!
             
             // Create request operation
             let operation: AFHTTPRequestOperation = AFHTTPRequestOperation(request: request)
