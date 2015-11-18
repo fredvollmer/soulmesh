@@ -14,6 +14,7 @@ class SMSyncEngine: NSObject {
     
     // MARK: Properties
     var registeredClassesToSync: [String] = Array()
+    var syncInProgress: Bool = false
     
     // Singleton creation
     class var sharedInstance: SMSyncEngine {
@@ -102,8 +103,31 @@ class SMSyncEngine: NSObject {
             
         }
         
-        // Add to operations queue
-        SMAPIClient.sharedInstance.operationQueue.addOperations(operations, waitUntilFinished: true)
+        // Create dispatch group to run operation
+        let queue: dispatch_queue_t = dispatch_get_global_queue(0, 0)
+        let group: dispatch_group_t = dispatch_group_create()
+        
+        dispatch_group_async(group, queue) {
+            // Add to operations queue
+            SMAPIClient.sharedInstance.operationQueue.addOperations(operations, waitUntilFinished: true)
+        }
+        
+        // Notification block for when operation queue is complete
+        dispatch_group_notify(group, queue) {
+            print("We made it to notify!")
+        }
+    }
+    
+    // Start the sync process
+    func startSync() {
+        if (!syncInProgress) {
+            willChangeValueForKey("syncInProgress")
+            syncInProgress = true
+            didChangeValueForKey("syncInProgress")
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+                self.downloadDataForRegisteredObjects(true)
+            })
+        }
     }
     
 }

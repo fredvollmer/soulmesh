@@ -21,6 +21,7 @@
 		A93B677D1BFBA2BE0030981E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93B67731BFB9F5E0030981E /* QuartzCore.framework */; };
 		A93B67851BFBA2E90030981E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A93B67841BFBA2E90030981E /* libxml2.2.tbd */; };
 		A93B678A1BFBB5F80030981E /* smSVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93B67891BFBB5F80030981E /* smSVG.swift */; };
+		A96EC19E1BFC6A1B00539C6F /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9BA8B5B1BFB997B0050EE7A /* fontawesome-webfont.ttf */; };
 		A9BA8B4A1BFB965D0050EE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B491BFB965D0050EE7A /* AppDelegate.swift */; };
 		A9BA8B4C1BFB96B10050EE7A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9BA8B4B1BFB96B10050EE7A /* Info.plist */; };
 		A9BA8B4E1BFB98650050EE7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BA8B4D1BFB98650050EE7A /* Main.storyboard */; };
@@ -709,6 +710,7 @@
 				A915FD8B1BFB94910081F939 /* LaunchScreen.storyboard in Resources */,
 				A9BA8B781BFB9AAE0050EE7A /* vc_floorMap.xib in Resources */,
 				A915FD881BFB94910081F939 /* Assets.xcassets in Resources */,
+				A96EC19E1BFC6A1B00539C6F /* fontawesome-webfont.ttf in Resources */,
 				A9BA8B4C1BFB96B10050EE7A /* Info.plist in Resources */,
 				A9BA8B4E1BFB98650050EE7A /* Main.storyboard in Resources */,
 			);
