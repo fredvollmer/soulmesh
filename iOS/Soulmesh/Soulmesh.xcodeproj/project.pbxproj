@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE159A61BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE159A51BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift */; };
 		6954E3732122E60AEE133DC7 /* Pods_Soulmesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AA5BD9EE89FB922352C506 /* Pods_Soulmesh.framework */; };
 		A915FD881BFB94910081F939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A915FD871BFB94910081F939 /* Assets.xcassets */; };
 		A915FD8B1BFB94910081F939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A915FD891BFB94910081F939 /* LaunchScreen.storyboard */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EE159A51BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorAddButtonViewController.swift; sourceTree = "<group>"; };
 		36AA5BD9EE89FB922352C506 /* Pods_Soulmesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		517D2774003E13C3E6CC31DB /* Pods-Soulmesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmesh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmesh/Pods-Soulmesh.release.xcconfig"; sourceTree = "<group>"; };
 		A915FD7D1BFB94910081F939 /* Soulmesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulmesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -528,6 +530,7 @@
 				A9BA8B571BFB994C0050EE7A /* FloorMap+CoreDataProperties.swift */,
 				A9BA8B511BFB98B50050EE7A /* Building+CoreDataProperties.swift */,
 				A9BA8B4F1BFB98AE0050EE7A /* Building.swift */,
+				0EE159A51BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				A9BA8B671BFB9A3F0050EE7A /* Sensor+CoreDataProperties.swift in Sources */,
 				A9BA8B631BFB99B80050EE7A /* Installer+CoreDataProperties.swift in Sources */,
 				A9BA8B4A1BFB965D0050EE7A /* AppDelegate.swift in Sources */,
+				0EE159A61BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift in Sources */,
 				A9BA8B521BFB98B50050EE7A /* Building+CoreDataProperties.swift in Sources */,
 				A9BA8B7A1BFB9AAE0050EE7A /* vc_main.swift in Sources */,
 				A9BA8B791BFB9AAE0050EE7A /* vc_login.swift in Sources */,
