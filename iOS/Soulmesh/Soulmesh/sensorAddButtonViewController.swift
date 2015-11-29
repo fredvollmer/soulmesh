@@ -10,9 +10,12 @@ import UIKit
 
 class sensorAddButtonViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate    //get appDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.textField.text = appDelegate.barcodeIn //set text field to appDelegate.barcodeIn value
         // Do any additional setup after loading the view.
     }
 
