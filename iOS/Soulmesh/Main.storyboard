@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="fontawesome-webfont.ttf">
@@ -333,12 +334,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-uz-mwC">
-                                        <rect key="frame" x="888" y="12" width="46" height="30"/>
+                                        <rect key="frame" x="949" y="13" width="46" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="30"/>
                                         <state key="normal" title="Floors">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="c07-oy-iGf" kind="popoverPresentation" popoverAnchorView="aH1-uz-mwC" id="IwV-MZ-jgM">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -350,7 +356,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-gU-Uuc">
                                 <rect key="frame" x="275" y="252" width="474" height="263"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DPL-RR-5pI">
                                 <rect key="frame" x="741" y="294" width="240" height="128"/>
@@ -424,9 +430,128 @@
             </objects>
             <point key="canvasLocation" x="1785" y="363"/>
         </scene>
+        <!--Add Sensor-->
+        <scene sceneID="RsH-xf-95p">
+            <objects>
+                <viewController title="Add Sensor" id="c07-oy-iGf" customClass="sensorAddButtonViewController" customModule="Soulmesh" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CaP-oK-eIA"/>
+                        <viewControllerLayoutGuide type="bottom" id="a8v-R1-Z9o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fn5-xA-4XC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="New Sensor ID" borderStyle="bezel" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TM9-Qc-oVy">
+                                <rect key="frame" x="105" y="150" width="176" height="30"/>
+                                <animations/>
+                                <color key="textColor" red="0.39618782722513091" green="0.39618782722513091" blue="0.39618782722513091" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89V-lC-omG">
+                                <rect key="frame" x="153" y="188" width="80" height="32"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.50588235294117645" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZB-8h-kSM">
+                                <rect key="frame" x="289" y="135" width="60" height="59"/>
+                                <animations/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <segue destination="ZRE-aW-RvU" kind="presentation" id="beD-WP-q20"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="89V-lC-omG" firstAttribute="centerX" secondItem="Fn5-xA-4XC" secondAttribute="centerX" id="BUQ-fe-7DZ"/>
+                            <constraint firstItem="TM9-Qc-oVy" firstAttribute="centerX" secondItem="Fn5-xA-4XC" secondAttribute="centerX" id="CUx-z4-Jxn"/>
+                            <constraint firstItem="CZB-8h-kSM" firstAttribute="leading" secondItem="TM9-Qc-oVy" secondAttribute="trailing" constant="8" id="Xb2-G9-yZh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="TM9-Qc-oVy" id="dtf-hU-8dt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4q4-17-PS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="-105"/>
+        </scene>
+        <!--Barcode Scanner-->
+        <scene sceneID="0P6-pK-UBv">
+            <objects>
+                <viewController id="ZRE-aW-RvU" customClass="BarcodeScanner" customModule="Soulmesh" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dkj-qV-0gk"/>
+                        <viewControllerLayoutGuide type="bottom" id="z4y-jz-UOr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fxd-g2-H4j" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTp-wN-bx0" userLabel="Output View">
+                                <rect key="frame" x="0.0" y="60" width="600" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p60-q4-dpd" userLabel="DataType">
+                                <rect key="frame" x="300" y="20" width="0.0" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="33Y-7A-MqA" userLabel="DataInfo">
+                                <rect key="frame" x="301" y="559" width="0.0" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwm-Vc-opA">
+                                <rect key="frame" x="276" y="555" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Accept"/>
+                                <connections>
+                                    <segue destination="c07-oy-iGf" kind="presentation" id="cHP-iy-3NW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p60-q4-dpd" firstAttribute="centerX" secondItem="Fxd-g2-H4j" secondAttribute="centerX" id="23P-s9-vwW"/>
+                            <constraint firstItem="hTp-wN-bx0" firstAttribute="width" secondItem="Fxd-g2-H4j" secondAttribute="width" id="90Q-9C-tdc"/>
+                            <constraint firstItem="z4y-jz-UOr" firstAttribute="top" secondItem="Qwm-Vc-opA" secondAttribute="bottom" constant="15" id="GZe-Dj-hw1"/>
+                            <constraint firstItem="hTp-wN-bx0" firstAttribute="height" secondItem="Fxd-g2-H4j" secondAttribute="height" multiplier="0.8" id="M3U-H6-zW4"/>
+                            <constraint firstItem="hTp-wN-bx0" firstAttribute="top" secondItem="p60-q4-dpd" secondAttribute="bottom" priority="999" constant="19" id="MrM-Ik-pfA"/>
+                            <constraint firstItem="Qwm-Vc-opA" firstAttribute="centerX" secondItem="Fxd-g2-H4j" secondAttribute="centerX" id="UOd-E7-TXp"/>
+                            <constraint firstItem="33Y-7A-MqA" firstAttribute="centerX" secondItem="Fxd-g2-H4j" secondAttribute="centerX" constant="0.5" id="WWW-qy-t1A"/>
+                            <constraint firstItem="hTp-wN-bx0" firstAttribute="centerY" secondItem="Fxd-g2-H4j" secondAttribute="centerY" id="aZg-q8-3id"/>
+                            <constraint firstItem="hTp-wN-bx0" firstAttribute="centerX" secondItem="Fxd-g2-H4j" secondAttribute="centerX" id="cws-2g-Ryf"/>
+                            <constraint firstItem="33Y-7A-MqA" firstAttribute="top" secondItem="hTp-wN-bx0" secondAttribute="bottom" priority="999" constant="19" id="wlm-Lt-mz5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="camView" destination="hTp-wN-bx0" id="ZwO-9A-29I"/>
+                        <outlet property="dataInfo" destination="33Y-7A-MqA" id="DEn-Vx-296"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pe-Ok-Oc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2869" y="695"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_login" width="2048" height="1536"/>
         <image name="logo" width="700" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cHP-iy-3NW"/>
+    </inferredMetricsTieBreakers>
 </document>
