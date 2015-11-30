@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		339B94D61C0A44B900B9E907 /* vc_sensorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */; };
-		339B94D71C0A44B900B9E907 /* vc_sensorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */; };
-		0E6977771C0B81B300EA9DF8 /* camera-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6977761C0B81B300EA9DF8 /* camera-outline.png */; };
 		0EE159A61BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE159A51BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift */; };
 		0EE15A121C0B7A77003FF2E6 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE15A111C0B7A77003FF2E6 /* BarcodeScanner.swift */; };
+		339B94D61C0A44B900B9E907 /* vc_sensorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */; };
+		339B94D71C0A44B900B9E907 /* vc_sensorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */; };
 		6954E3732122E60AEE133DC7 /* Pods_Soulmesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AA5BD9EE89FB922352C506 /* Pods_Soulmesh.framework */; };
 		A915FD881BFB94910081F939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A915FD871BFB94910081F939 /* Assets.xcassets */; };
 		A915FD8B1BFB94910081F939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A915FD891BFB94910081F939 /* LaunchScreen.storyboard */; };
@@ -72,11 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vc_sensorDetailViewController.swift; sourceTree = "<group>"; };
-		339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vc_sensorDetailViewController.xib; sourceTree = "<group>"; };
-		0E6977761C0B81B300EA9DF8 /* camera-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-outline.png"; path = "../../../../../Desktop/camera-outline.png"; sourceTree = "<group>"; };
 		0EE159A51BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sensorAddButtonViewController.swift; sourceTree = "<group>"; };
 		0EE15A111C0B7A77003FF2E6 /* BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarcodeScanner.swift; path = ../BarcodeScanner.swift; sourceTree = "<group>"; };
+		339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vc_sensorDetailViewController.swift; sourceTree = "<group>"; };
+		339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vc_sensorDetailViewController.xib; sourceTree = "<group>"; };
 		36AA5BD9EE89FB922352C506 /* Pods_Soulmesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		517D2774003E13C3E6CC31DB /* Pods-Soulmesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmesh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmesh/Pods-Soulmesh.release.xcconfig"; sourceTree = "<group>"; };
 		A915FD7D1BFB94910081F939 /* Soulmesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulmesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -556,7 +554,6 @@
 		A9BA8B461BFB960B0050EE7A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-
 				0EE159A51BFFBEE0003FF2E6 /* sensorAddButtonViewController.swift */,
 				0EE15A111C0B7A77003FF2E6 /* BarcodeScanner.swift */,
 				A9BA8B721BFB9AAE0050EE7A /* vc_floorMap.swift */,
@@ -598,7 +595,6 @@
 		A9BA8B5A1BFB996E0050EE7A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0E6977761C0B81B300EA9DF8 /* camera-outline.png */,
 				A9BA8B5B1BFB997B0050EE7A /* fontawesome-webfont.ttf */,
 			);
 			name = Fonts;
@@ -727,7 +723,6 @@
 				339B94D71C0A44B900B9E907 /* vc_sensorDetailViewController.xib in Resources */,
 				A9BA8B781BFB9AAE0050EE7A /* vc_floorMap.xib in Resources */,
 				A915FD881BFB94910081F939 /* Assets.xcassets in Resources */,
-				0E6977771C0B81B300EA9DF8 /* camera-outline.png in Resources */,
 				A96EC19E1BFC6A1B00539C6F /* fontawesome-webfont.ttf in Resources */,
 				A9BA8B4C1BFB96B10050EE7A /* Info.plist in Resources */,
 				A9BA8B4E1BFB98650050EE7A /* Main.storyboard in Resources */,
@@ -810,7 +805,6 @@
 				A9BA8B6E1BFB9A7A0050EE7A /* SMSyncEngine.swift in Sources */,
 				0EE15A121C0B7A77003FF2E6 /* BarcodeScanner.swift in Sources */,
 				A9BA8B7F1BFB9AC20050EE7A /* view_spinner.swift in Sources */,
-				339B94D91C0B980D00B9E907 /* vc_BarcodeScanner.swift in Sources */,
 				A9BA8B7B1BFB9AAE0050EE7A /* vc_table_floors.swift in Sources */,
 				A9BA8B771BFB9AAE0050EE7A /* vc_floorMap.swift in Sources */,
 				A9BA8B711BFB9A9F0050EE7A /* table_buildingList.swift in Sources */,
