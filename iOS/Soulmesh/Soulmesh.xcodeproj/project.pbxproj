@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		339B94D61C0A44B900B9E907 /* vc_sensorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */; };
+		339B94D71C0A44B900B9E907 /* vc_sensorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */; };
+		339B94D91C0B980D00B9E907 /* vc_BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B94D81C0B980D00B9E907 /* vc_BarcodeScanner.swift */; };
 		6954E3732122E60AEE133DC7 /* Pods_Soulmesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AA5BD9EE89FB922352C506 /* Pods_Soulmesh.framework */; };
 		A915FD881BFB94910081F939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A915FD871BFB94910081F939 /* Assets.xcassets */; };
 		A915FD8B1BFB94910081F939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A915FD891BFB94910081F939 /* LaunchScreen.storyboard */; };
@@ -30,8 +33,8 @@
 		A9BA8B551BFB98DB0050EE7A /* BuildingTableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B541BFB98DB0050EE7A /* BuildingTableProtocol.swift */; };
 		A9BA8B581BFB994C0050EE7A /* FloorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B561BFB994C0050EE7A /* FloorMap.swift */; };
 		A9BA8B591BFB994C0050EE7A /* FloorMap+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B571BFB994C0050EE7A /* FloorMap+CoreDataProperties.swift */; };
-		A9BA8B601BFB99B80050EE7A /* InstalledSesnor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B5C1BFB99B80050EE7A /* InstalledSesnor.swift */; };
-		A9BA8B611BFB99B80050EE7A /* InstalledSesnor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B5D1BFB99B80050EE7A /* InstalledSesnor+CoreDataProperties.swift */; };
+		A9BA8B601BFB99B80050EE7A /* InstalledSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B5C1BFB99B80050EE7A /* InstalledSensor.swift */; };
+		A9BA8B611BFB99B80050EE7A /* InstalledSensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B5D1BFB99B80050EE7A /* InstalledSensor+CoreDataProperties.swift */; };
 		A9BA8B621BFB99B80050EE7A /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B5E1BFB99B80050EE7A /* Installer.swift */; };
 		A9BA8B631BFB99B80050EE7A /* Installer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B5F1BFB99B80050EE7A /* Installer+CoreDataProperties.swift */; };
 		A9BA8B661BFB9A3F0050EE7A /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA8B641BFB9A3F0050EE7A /* Sensor.swift */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vc_sensorDetailViewController.swift; sourceTree = "<group>"; };
+		339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vc_sensorDetailViewController.xib; sourceTree = "<group>"; };
+		339B94D81C0B980D00B9E907 /* vc_BarcodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vc_BarcodeScanner.swift; sourceTree = "<group>"; };
 		36AA5BD9EE89FB922352C506 /* Pods_Soulmesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		517D2774003E13C3E6CC31DB /* Pods-Soulmesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmesh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soulmesh/Pods-Soulmesh.release.xcconfig"; sourceTree = "<group>"; };
 		A915FD7D1BFB94910081F939 /* Soulmesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulmesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,8 +230,8 @@
 		A9BA8B561BFB994C0050EE7A /* FloorMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMap.swift; sourceTree = "<group>"; };
 		A9BA8B571BFB994C0050EE7A /* FloorMap+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloorMap+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A9BA8B5B1BFB997B0050EE7A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		A9BA8B5C1BFB99B80050EE7A /* InstalledSesnor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalledSesnor.swift; sourceTree = "<group>"; };
-		A9BA8B5D1BFB99B80050EE7A /* InstalledSesnor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InstalledSesnor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A9BA8B5C1BFB99B80050EE7A /* InstalledSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalledSensor.swift; sourceTree = "<group>"; };
+		A9BA8B5D1BFB99B80050EE7A /* InstalledSensor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InstalledSensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A9BA8B5E1BFB99B80050EE7A /* Installer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		A9BA8B5F1BFB99B80050EE7A /* Installer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Installer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A9BA8B641BFB9A3F0050EE7A /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
@@ -520,8 +526,8 @@
 			children = (
 				A9BA8B641BFB9A3F0050EE7A /* Sensor.swift */,
 				A9BA8B651BFB9A3F0050EE7A /* Sensor+CoreDataProperties.swift */,
-				A9BA8B5C1BFB99B80050EE7A /* InstalledSesnor.swift */,
-				A9BA8B5D1BFB99B80050EE7A /* InstalledSesnor+CoreDataProperties.swift */,
+				A9BA8B5C1BFB99B80050EE7A /* InstalledSensor.swift */,
+				A9BA8B5D1BFB99B80050EE7A /* InstalledSensor+CoreDataProperties.swift */,
 				A9BA8B5E1BFB99B80050EE7A /* Installer.swift */,
 				A9BA8B5F1BFB99B80050EE7A /* Installer+CoreDataProperties.swift */,
 				A9BA8B561BFB994C0050EE7A /* FloorMap.swift */,
@@ -546,11 +552,14 @@
 		A9BA8B461BFB960B0050EE7A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				339B94D81C0B980D00B9E907 /* vc_BarcodeScanner.swift */,
 				A9BA8B721BFB9AAE0050EE7A /* vc_floorMap.swift */,
 				A9BA8B731BFB9AAE0050EE7A /* vc_floorMap.xib */,
 				A9BA8B741BFB9AAE0050EE7A /* vc_login.swift */,
 				A9BA8B751BFB9AAE0050EE7A /* vc_main.swift */,
 				A9BA8B761BFB9AAE0050EE7A /* vc_table_floors.swift */,
+				339B94D41C0A44B900B9E907 /* vc_sensorDetailViewController.swift */,
+				339B94D51C0A44B900B9E907 /* vc_sensorDetailViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -708,6 +717,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A915FD8B1BFB94910081F939 /* LaunchScreen.storyboard in Resources */,
+				339B94D71C0A44B900B9E907 /* vc_sensorDetailViewController.xib in Resources */,
 				A9BA8B781BFB9AAE0050EE7A /* vc_floorMap.xib in Resources */,
 				A915FD881BFB94910081F939 /* Assets.xcassets in Resources */,
 				A96EC19E1BFC6A1B00539C6F /* fontawesome-webfont.ttf in Resources */,
@@ -786,10 +796,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BA8B621BFB99B80050EE7A /* Installer.swift in Sources */,
-				A9BA8B611BFB99B80050EE7A /* InstalledSesnor+CoreDataProperties.swift in Sources */,
+				A9BA8B611BFB99B80050EE7A /* InstalledSensor+CoreDataProperties.swift in Sources */,
+				339B94D61C0A44B900B9E907 /* vc_sensorDetailViewController.swift in Sources */,
 				A9BA8B661BFB9A3F0050EE7A /* Sensor.swift in Sources */,
 				A9BA8B6E1BFB9A7A0050EE7A /* SMSyncEngine.swift in Sources */,
 				A9BA8B7F1BFB9AC20050EE7A /* view_spinner.swift in Sources */,
+				339B94D91C0B980D00B9E907 /* vc_BarcodeScanner.swift in Sources */,
 				A9BA8B7B1BFB9AAE0050EE7A /* vc_table_floors.swift in Sources */,
 				A9BA8B771BFB9AAE0050EE7A /* vc_floorMap.swift in Sources */,
 				A9BA8B711BFB9A9F0050EE7A /* table_buildingList.swift in Sources */,
@@ -802,7 +814,7 @@
 				A9BA8B791BFB9AAE0050EE7A /* vc_login.swift in Sources */,
 				A9BA8B551BFB98DB0050EE7A /* BuildingTableProtocol.swift in Sources */,
 				A9BA8B691BFB9A4A0050EE7A /* SMAPIClient.swift in Sources */,
-				A9BA8B601BFB99B80050EE7A /* InstalledSesnor.swift in Sources */,
+				A9BA8B601BFB99B80050EE7A /* InstalledSensor.swift in Sources */,
 				A9BA8B581BFB994C0050EE7A /* FloorMap.swift in Sources */,
 				A9BA8B501BFB98AE0050EE7A /* Building.swift in Sources */,
 				A9BA8B591BFB994C0050EE7A /* FloorMap+CoreDataProperties.swift in Sources */,

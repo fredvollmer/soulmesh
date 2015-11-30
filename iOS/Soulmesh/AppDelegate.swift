@@ -19,11 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // MARK: Core Data stack
-        MagicalRecord.setupCoreDataStackWithStoreNamed("SMModel")
+        MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("Soulmesh.sqlite")
         
         // Register sync classes
+        SMSyncEngine.sharedInstance.registerNSManagedObjectClassToSync(FloorMap)
         SMSyncEngine.sharedInstance.registerNSManagedObjectClassToSync(Building)
-        
+        SMSyncEngine.sharedInstance.registerNSManagedObjectClassToSync(Sensor)
+        SMSyncEngine.sharedInstance.registerNSManagedObjectClassToSync(InstalledSensor)
+
         return true
     }
 
@@ -44,6 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
+        print(NSPersistentStore.MR_urlForStoreName(MagicalRecord.defaultStoreName()))
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "kSMInitialSyncCompleted")
+        NSUserDefaults.standardUserDefaults().synchronize()
         // Start sync
         SMSyncEngine.sharedInstance.startSync()
     }
@@ -51,7 +57,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func applicationDirectoryPath() -> String {
+        return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last! as String
+    }
 
 }
 

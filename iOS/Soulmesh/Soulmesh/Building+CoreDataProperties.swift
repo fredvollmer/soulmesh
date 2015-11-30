@@ -2,7 +2,7 @@
 //  Building+CoreDataProperties.swift
 //  Soulmesh
 //
-//  Created by Fred Vollmer on 11/15/15.
+//  Created by Annie Fischer on 11/26/15.
 //  Copyright © 2015 Fred Vollmer. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,11 +14,14 @@ import CoreData
 
 extension Building {
 
-    @NSManaged var buildingID: NSNumber?
-    @NSManaged var lattitude: NSNumber?
+    @NSManaged var guid: String?
+    @NSManaged var latitude: NSNumber?
     @NSManaged var longitude: NSNumber?
+    @NSManaged var syncStatus: NSNumber?
     @NSManaged var updatedAt: NSDate?
+    @NSManaged var name: String?
     @NSManaged var floors: NSSet?
-    @NSManaged var sesnors: NSSet?
+    @NSManaged var installer: Installer?
+    @NSManaged var sensors: NSSet?
 
 }

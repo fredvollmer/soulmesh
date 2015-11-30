@@ -1,50 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
     <entity name="Building" representedClassName="Building" syncable="YES">
-        <attribute name="buildingID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="lattitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="floors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FloorMap" syncable="YES"/>
-        <relationship name="sesnors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sensor" syncable="YES"/>
+        <relationship name="floors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FloorMap" inverseName="building" inverseEntity="FloorMap" syncable="YES">
+            <userInfo>
+                <entry key="relatedByAttribute" value="guid"/>
+            </userInfo>
+        </relationship>
+        <relationship name="installer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Installer" inverseName="building" inverseEntity="Installer" syncable="YES">
+            <userInfo>
+                <entry key="relatedByAttribute" value="guid"/>
+            </userInfo>
+        </relationship>
+        <relationship name="sensors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sensor" inverseName="building" inverseEntity="Sensor" syncable="YES">
+            <userInfo>
+                <entry key="relatedByAttribute" value="guid"/>
+            </userInfo>
+        </relationship>
+        <userInfo>
+            <entry key="relatedByAttribute" value="guid"/>
+        </userInfo>
     </entity>
     <entity name="FloorMap" representedClassName="FloorMap" syncable="YES">
-        <attribute name="buildingID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="floorMapID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="buildingID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="floorNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="svg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="installedSesnors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InstalledSesnor" syncable="YES"/>
+        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="floors" inverseEntity="Building" syncable="YES">
+            <userInfo>
+                <entry key="relatedByAttribute" value="guid"/>
+            </userInfo>
+        </relationship>
+        <relationship name="installedSesnors" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="InstalledSensor" inverseName="floorMap" inverseEntity="InstalledSensor" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="guid"/>
+        </userInfo>
     </entity>
-    <entity name="InstalledSesnor" representedClassName="InstalledSesnor" syncable="YES">
-        <attribute name="floorMapID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="sesnorID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    <entity name="InstalledSensor" representedClassName="InstalledSensor" syncable="YES">
+        <attribute name="freeText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="installerID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="floorMap" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloorMap" syncable="YES"/>
-        <relationship name="sesnor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sensor" syncable="YES"/>
+        <relationship name="floorMap" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloorMap" inverseName="installedSesnors" inverseEntity="FloorMap" syncable="YES">
+            <userInfo>
+                <entry key="relatedByAttribute" value="guid"/>
+            </userInfo>
+        </relationship>
+        <relationship name="sesnor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sensor" inverseName="installedSensor" inverseEntity="Sensor" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="guid"/>
+        </userInfo>
     </entity>
     <entity name="Installer" representedClassName="Installer" syncable="YES">
         <attribute name="buildingID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="installerID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="installer" inverseEntity="Building" syncable="YES"/>
     </entity>
     <entity name="Sensor" representedClassName="Sensor" syncable="YES">
-        <attribute name="buildingID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="callibrationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="freeText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sensorID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sensorType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" syncable="YES"/>
+        <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="sensors" inverseEntity="Building" syncable="YES"/>
+        <relationship name="installedSensor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InstalledSensor" inverseName="sesnor" inverseEntity="InstalledSensor" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Building" positionX="-333" positionY="-216" width="128" height="135"/>
-        <element name="FloorMap" positionX="106" positionY="-117" width="128" height="135"/>
-        <element name="InstalledSesnor" positionX="36" positionY="234" width="128" height="150"/>
-        <element name="Installer" positionX="-459" positionY="282" width="128" height="105"/>
-        <element name="Sensor" positionX="-531" positionY="117" width="128" height="150"/>
+        <element name="Building" positionX="-333" positionY="-216" width="128" height="180"/>
+        <element name="FloorMap" positionX="106" positionY="-117" width="128" height="165"/>
+        <element name="InstalledSensor" positionX="36" positionY="234" width="128" height="180"/>
+        <element name="Installer" positionX="-459" positionY="282" width="128" height="120"/>
+        <element name="Sensor" positionX="-531" positionY="117" width="128" height="180"/>
     </elements>
 </model>

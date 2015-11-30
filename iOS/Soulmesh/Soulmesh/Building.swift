@@ -13,7 +13,7 @@ import SwiftyJSON
 @objc(Building)
 class Building: NSManagedObject {
     
-    lazy var sortedFloorsArray: [FloorMap?] = {
+    lazy var sortedFloorsArray: [FloorMap] = {
         var floorArray: [FloorMap] = self.floors?.allObjects as! [FloorMap]
         floorArray.sortInPlace { $0.floorNumber! < $1.floorNumber! }
         return floorArray

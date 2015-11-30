@@ -11,20 +11,26 @@ import UIKit
 class vc_table_floors: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Properties
-    var building: Building = Building()
+    var building: Building?
+    var floors: [FloorMap] = Array()
+    
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: Temporary prototyping vars
-    let _buildingList: [String] = ["Basement", "First", "Second", "Roof"];
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // Register cell class
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "buildListCell")
         
         // Styling adjustments
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15)
+        
+        // Set floors array with current building's floors
+        //floors = building.floors?.allObjects as! [FloorMap]
     }
     
     /*
@@ -38,13 +44,13 @@ class vc_table_floors: UIViewController, UITableViewDelegate, UITableViewDataSou
     // MARK: TableView delegate methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return building.floors!.count
+        return building!.floors!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : UITableViewCell =  tableView.dequeueReusableCellWithIdentifier("buildListCell") as UITableViewCell!
         cell.backgroundColor = UIColor.clearColor()
-        guard let floorNumber = building.sortedFloorsArray[indexPath.row]!.floorNumber else {
+        guard let floorNumber = building!.sortedFloorsArray[indexPath.row].floorNumber else {
             return cell
         }
         cell.textLabel?.text = String(floorNumber)
@@ -55,9 +61,9 @@ class vc_table_floors: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Get view controller (presenting)
         let vc: vc_main = presentingViewController as! vc_main
         // Get floor object for this row
-        let floor = building.sortedFloorsArray[indexPath.row]
+        let floor = building!.sortedFloorsArray[indexPath.row]
         // Switch floor in parent vc
-        vc.didSelectNewFloor(floor!)
+        vc.didSelectNewFloor(floor)
         // Dismiss popover
         vc.dismissViewControllerAnimated(true, completion: nil)
     }

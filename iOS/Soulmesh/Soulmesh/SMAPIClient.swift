@@ -28,7 +28,7 @@ class SMAPIClient: AFHTTPRequestOperationManager {
     
     // GET Methods
     func GETRequestForClass (className: String, parameters: NSDictionary)  -> NSMutableURLRequest {
-        let request = AFHTTPRequestSerializer.init().requestWithMethod("GET", URLString: String(baseURL) + className, parameters: parameters)
+        let request = AFHTTPRequestSerializer.init().requestWithMethod("GET", URLString: (baseURL?.absoluteString)! + className + "/", parameters: parameters)
         return request
     }
     
@@ -37,11 +37,11 @@ class SMAPIClient: AFHTTPRequestOperationManager {
         var parameters: NSDictionary
         
         if ((updatedDate) != nil) {
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.'999Z'"
-            dateFormatter.timeZone = NSTimeZone(name: "GMT")
+            //let dateFormatter = NSDateFormatter()
+            //dateFormatter.dateFormat = "yyyy-MM-dd' 'HH:mm:ss"
+            //dateFormatter.timeZone = NSTimeZone(name: "GMT")
             
-            parameters = NSDictionary(object: dateFormatter.stringFromDate(updatedDate!), forKey: "updatedAfter")
+            parameters = NSDictionary(object: updatedDate!.timeIntervalSince1970, forKey: "updatedAfter")
             
             request = GETRequestForClass(className, parameters: parameters)
             

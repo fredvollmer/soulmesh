@@ -13,7 +13,8 @@ class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSourc
     var vcDelegate : BuildingTableProtocol? = nil
     
     // MARK: Temporary prototyping vars
-    let _buildingList: [String] = ["Reid Hall", "Montana Hall", "EPS"];
+    let _buildingList = Building.MR_findAllSortedBy("name",
+    ascending:true);
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -51,7 +52,7 @@ class table_buildingList: UITableView, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : UITableViewCell =  self.dequeueReusableCellWithIdentifier("buildListCell") as UITableViewCell!
-        cell.textLabel?.text = _buildingList[indexPath.row]
+        cell.textLabel?.text = _buildingList[indexPath.row].name
         return cell
     }
     

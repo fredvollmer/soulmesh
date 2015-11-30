@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MagicalRecord
 
-class vc_main: UIViewController, UIScrollViewDelegate {
+class vc_main: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     var building: Building?
@@ -18,20 +19,27 @@ class vc_main: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var btn_add: UIButton!;
     @IBOutlet weak var btn_sensors: UIButton!;
     @IBOutlet weak var view_floorContainer: UIView!
+    @IBOutlet weak var constraint_sensorTableWidth: NSLayoutConstraint!
+    @IBOutlet weak var table_sensors: UITableView!
     
-    let floorVC : vc_floorMap = vc_floorMap()
+    var floorVC : vc_floorMap = vc_floorMap()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // Load initial building
+        building = Building.MR_findFirstByAttribute("guid", withValue: 7)
         
         // Set additional style properties
         btn_floors.setTitle("\u{f0cb}", forState: .Normal)
         btn_back.setTitle("\u{f053}", forState: .Normal)
         btn_add.setTitle("\u{f067}", forState: .Normal)
         btn_sensors.setTitle("\u{f041}", forState: .Normal)
+        
+        // Sensor table setup
+        table_sensors.delegate = self
+        table_sensors.dataSource = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -39,6 +47,12 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         self.addChildViewController(floorVC)
         floorVC.view.frame = view_floorContainer.bounds
         self.view_floorContainer.addSubview(floorVC.view)
+        
+        // Set initial floor
+        if (building != nil && building?.sortedFloorsArray.count > 0) {
+            floorVC.displayFloor( (building?.sortedFloorsArray.first)! )
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,7 +65,40 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // MARK: Table delegate methods
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let x = (floorVC.floor?.installedSesnors?.count) {
+            return x
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let floor: InstalledSensor = floorVC.floor?.installedSesnors![indexPath.row] as! InstalledSensor
+        let cell : UITableViewCell =  tableView.dequeueReusableCellWithIdentifier("sensorCell") as UITableViewCell!
+        cell.textLabel?.text = floor.guid
+        cell.detailTextLabel?.text = floor.freeText
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete", handler: {action, indexPath in
+            print("Delete!!!!!")
+        })
+        
+        return [deleteAction]
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        floorVC.highlightSensor(withIndex: indexPath.row)
+    }
     
     /*
     // MARK: - Navigation
@@ -69,16 +116,29 @@ class vc_main: UIViewController, UIScrollViewDelegate {
         case "popFloors"? :
             if let controller: vc_table_floors = segue.destinationViewController as? vc_table_floors {
                 // Set building
-                controller.building = building!
+                controller.building = building
                 // Align arrow with proper button
                 controller.popoverPresentationController!.sourceRect = controller.popoverPresentationController!.sourceView!.bounds
             }
             break
+            
         default:
             break
         }
-        
-
+    }
+    
+    // MARK: Button actions
+    @IBAction func showSensors (sender: AnyObject) {
+        if (constraint_sensorTableWidth.constant > 0) {
+            // Hide
+            constraint_sensorTableWidth.constant = 0
+        } else {
+            // Show
+            constraint_sensorTableWidth.constant = 240
+        }
+        UIView.animateWithDuration(0.5, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
     
     /*

@@ -2,7 +2,7 @@
 //  Sensor+CoreDataProperties.swift
 //  Soulmesh
 //
-//  Created by Fred Vollmer on 11/15/15.
+//  Created by Annie Fischer on 11/26/15.
 //  Copyright © 2015 Fred Vollmer. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,12 +14,14 @@ import CoreData
 
 extension Sensor {
 
-    @NSManaged var buildingID: NSNumber?
     @NSManaged var callibrationDate: NSDate?
     @NSManaged var freeText: String?
+    @NSManaged var guid: String?
     @NSManaged var sensorID: NSNumber?
     @NSManaged var sensorType: String?
+    @NSManaged var syncStatus: NSNumber?
     @NSManaged var updatedAt: NSDate?
     @NSManaged var building: Building?
+    @NSManaged var installedSensor: InstalledSensor?
 
 }

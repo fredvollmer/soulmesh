@@ -10,7 +10,16 @@ import UIKit
 import CoreGraphics
 
 class smSVG: SVGKLayeredImageView {
-
+    
+    override var transform: CGAffineTransform {
+        didSet {
+            let invertedTransform: CGAffineTransform  = CGAffineTransformInvert(transform);
+            for view in subviews {
+                view.transform = invertedTransform
+            }
+        }
+    }
+    
     // Override setTransform() so that sensors are to remain same size with zoom
     func scaleSensors(zoomScale: CGFloat, minScale: CGFloat) {
         for sensor in subviews {
@@ -20,5 +29,4 @@ class smSVG: SVGKLayeredImageView {
             }
         }
     }
-    
 }

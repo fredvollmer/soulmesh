@@ -12,7 +12,9 @@ import MagicalRecord
 class vc_floorMap: UIViewController, UIScrollViewDelegate {
 
     // MARK: Properties
-    var floor: FloorMap = FloorMap()
+    var floor: FloorMap?
+    var hasLaidOutSubviews: Bool = false
+    var needsFloorUpdateOnSubviewLayout: Bool = false
     
     @IBOutlet weak var view_svg: smSVG!
     @IBOutlet weak var floorScroller: UIScrollView!
@@ -24,15 +26,25 @@ class vc_floorMap: UIViewController, UIScrollViewDelegate {
         floorScroller.delegate = self
         floorScroller.backgroundColor = UIColor.clearColor()
         view_svg.backgroundColor = UIColor.clearColor()
-            
-        let floor = FloorMap.MR_createEntity()
-            
+                        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        hasLaidOutSubviews = true
+        if (needsFloorUpdateOnSubviewLayout) {
+            displayFloor(floor!)
+            needsFloorUpdateOnSubviewLayout = false
         }
+    }
     
     func displayFloor(floor: FloorMap) {
         self.floor = floor
-        setFloorScrollerImage(floor.getSVG())
-        
+        if (hasLaidOutSubviews) {
+            setFloorScrollerImage(floor.getSVG())
+            updateSensorsWithFloor(floor)
+        } else {
+            needsFloorUpdateOnSubviewLayout = true
+        }
     }
     
         func getLayers(sublayers :[AnyObject]) -> [CAShapeLayer]{
@@ -95,7 +107,7 @@ class vc_floorMap: UIViewController, UIScrollViewDelegate {
         
         func scrollViewDidZoom(scrollView: UIScrollView) {
             centerScrollViewContents(view_svg)
-            view_svg.scaleSensors(floorScroller.zoomScale, minScale: floorScroller.minimumZoomScale)
+            //view_svg.scaleSensors(floorScroller.zoomScale, minScale: floorScroller.minimumZoomScale)
         }
         
         // MARK: Utility functions
@@ -125,22 +137,37 @@ class vc_floorMap: UIViewController, UIScrollViewDelegate {
             }
         }
         
+        // Counter for tags
+        var i: Int = 0
+        
         for sensorObject in floor.installedSesnors! {
-            let sensor = sensorObject as! InstalledSesnor
+            let sensor = sensorObject as! InstalledSensor
             // Create marker view
             let mark : view_sensorMark = view_sensorMark()
-            mark.frame = CGRectMake(0, 0, 50, 50)
-            mark.center = CGPointMake(CGFloat(sensor.x!), CGFloat(sensor.y!))
-            mark.backgroundColor = UIColor.clearColor()
+            
+            // Calculate X and Y coordinates
+            let x = CGFloat(sensor.x!) * floorScroller.bounds.size.width
+            let y = CGFloat(sensor.y!) * floorScroller.bounds.size.height
+            mark.frame = CGRectMake(x, y, 50, 50)
+            //mark.center = CGPointMake(x, y)
+            //mark.backgroundColor = UIColor.clearColor()
             
             // Link with sensor object
             mark.sensor = sensor
+            mark.tag = i
             
             // "Drag" gesture recognizer
-            let gr : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didDragSensor:")
-            mark.addGestureRecognizer(gr)
+            let gr_drag : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didDragSensor:")
+            mark.addGestureRecognizer(gr_drag)
+            
+            // "Tap" gesture recognizer
+            let gr_tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTapSensor:")
+            mark.addGestureRecognizer(gr_tap)
             
             self.view_svg.addSubview(mark)
+            
+            // Incremnet tag counter
+            i++
         }
     }
     
@@ -161,6 +188,30 @@ class vc_floorMap: UIViewController, UIScrollViewDelegate {
         
         // Must set translation back to 0
         recognizer.setTranslation(CGPointZero, inView: self.view_svg)
+    }
+    
+    func didTapSensor(recognizer: UITapGestureRecognizer) {
+        let marker: view_sensorMark = recognizer.view as! view_sensorMark
+        
+        // Setup pop controller
+        let popoverVC = vc_sensorDetailViewController()
+        popoverVC.sensor = marker.sensor
+        popoverVC.marker = marker
+        popoverVC.modalPresentationStyle = .Popover
+        popoverVC.preferredContentSize = CGSizeMake(320, 120)
+
+        // Present pop controller
+        presentViewController(popoverVC, animated: true, completion: nil)
+        popoverVC.popoverPresentationController?.sourceView = view
+        popoverVC.popoverPresentationController?.sourceRect = marker.frame
+    }
+    
+    func highlightSensor(withIndex index: Int) {
+        let marker: view_sensorMark = view.viewWithTag(index) as! view_sensorMark
+        // Set marker state to highlighted and redraw
+        marker.highlighted = true
+        marker.setNeedsDisplay()
+        
     }
     
     
